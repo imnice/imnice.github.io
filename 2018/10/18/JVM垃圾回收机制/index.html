@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
-  <meta charset="utf-8">
-  
-  <title>JVM垃圾回收机制 | LSB.pro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="keywords" content="Java基础" />
-  
-  
-  
-  
-  <meta name="description" content="JVM垃圾回收机制#附加一段文章摘要，最好140字以内，会出现在meta的description里面">
+    <meta charset="utf-8">
+<title>JVM垃圾回收机制 - LSB.pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="JVM垃圾回收机制#附加一段文章摘要，最好140字以内，会出现在meta的description里面">
+
+
+
+<meta name="keywords" content="NB!">
+
+
+
+    <meta name="description" content="JVM垃圾回收机制#附加一段文章摘要，最好140字以内，会出现在meta的description里面">
 <meta name="keywords" content="Java基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM垃圾回收机制">
 <meta property="og:url" content="https://imnice.github.io/2018/10/18/JVM垃圾回收机制/index.html">
 <meta property="og:site_name" content="LSB.pro">
 <meta property="og:description" content="JVM垃圾回收机制#附加一段文章摘要，最好140字以内，会出现在meta的description里面">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/lDYvXZXQjNOeobTNTHuRcHLDww5D7PQd6yEHjhtWXDk!/r/dDUBAAAAAAAA">
 <meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/Fv*clFqW5gB3kiO6czOeR8jnt7rfTtU*BDI7Jodi.JI!/r/dFIBAAAAAAAA">
 <meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/yqHoSUt17PQL09A8caB.e26xdKa582DU9nxpVo6YFq0!/r/dDUBAAAAAAAA">
@@ -31,142 +38,245 @@
 <meta name="twitter:title" content="JVM垃圾回收机制">
 <meta name="twitter:description" content="JVM垃圾回收机制#附加一段文章摘要，最好140字以内，会出现在meta的description里面">
 <meta name="twitter:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/lDYvXZXQjNOeobTNTHuRcHLDww5D7PQd6yEHjhtWXDk!/r/dDUBAAAAAAAA">
-  
-    <link rel="alternate" href="/atom.xml" title="LSB.pro" type="application/atom+xml">
-  
-  <link rel="icon" href="/css/images/favicon.ico">
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
     
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/style.css">
+    
 
-  <script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css" >
-  <link rel="stylesheet" href="/css/fashion.css" >
-  <link rel="stylesheet" href="/css/glyphs.css" >
 
 </head>
-
-
-
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
-
-
-  
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
-
-
-<header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
-  <div class="clearfix container">
-      <div class="site-branding">
-
-          <h1 class="site-title">
-            
-              <a href="/" title="LSB.pro" rel="home"> LSB.pro </a>
-            
-          </h1>
-          
-          
-            
-          <nav id="main-navigation" class="main-navigation" role="navigation">
-            <a class="nav-open">Menu</a>
-            <a class="nav-close">Close</a>
-
-            <div class="clearfix sf-menu">
-              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    LSB.pro
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
-                    
-              </ul>
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </nav>
-
-      </div>
-  </div>
-</header>
-
-
-  <div id="container">
-    <div id="wrap">
+        </div>
+        
+        <div class="navbar-menu navbar-start">
             
-      <div id="content" class="outer">
+            <a class="navbar-item "
+               href="/">Home</a>
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/about">About</a>
+            
+        </div>
         
-          <section id="main" style="float:none;"><article id="post-JVM垃圾回收机制" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" class="article-title" itemprop="name">
-      JVM垃圾回收机制
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/10/18/JVM垃圾回收机制/" class="article-date">
-	  <time datetime="2018-10-18T04:08:42.000Z" itemprop="datePublished">十月 18, 2018</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
- 
-      
-	<span id="busuanzi_container_page_pv">
-	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-	</span>
-
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="搜索" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="目录">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#什么是垃圾回收（Garbage-Collection，GC）">1&nbsp;&nbsp;<b>什么是垃圾回收（Garbage Collection，GC）</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#哪些内存需要回收">2&nbsp;&nbsp;<b>哪些内存需要回收</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#引用计数算法">2.1&nbsp;&nbsp;引用计数算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#可达性分析算法">2.2&nbsp;&nbsp;可达性分析算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#Java中的引用你了解多少">2.3&nbsp;&nbsp;Java中的引用你了解多少</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#对象死亡（被回收）前的最后一次挣扎">2.4&nbsp;&nbsp;对象死亡（被回收）前的最后一次挣扎</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#方法区如何判断是否需要回收">2.5&nbsp;&nbsp;方法区如何判断是否需要回收</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#常用的垃圾收集算法">3&nbsp;&nbsp;<b>常用的垃圾收集算法</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#标记-清除算法">3.1&nbsp;&nbsp;标记-清除算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#复制算法">3.2&nbsp;&nbsp;复制算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#标记-整理算法">3.3&nbsp;&nbsp;标记-整理算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#分代收集算法">3.4&nbsp;&nbsp;分代收集算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#年轻代（Young-Generation）的回收算法">3.4.1&nbsp;&nbsp;年轻代（Young Generation）的回收算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#年老代（Old-Generation）的回收算法">3.4.2&nbsp;&nbsp;年老代（Old Generation）的回收算法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#持久代（Permanent-Generation）的回收算法">3.4.3&nbsp;&nbsp;持久代（Permanent Generation）的回收算法</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#常见的垃圾收集器">4&nbsp;&nbsp;<b>常见的垃圾收集器</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#GC是什么时候触发的">5&nbsp;&nbsp;<b>GC是什么时候触发的</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#减少GC开销的措施">6&nbsp;&nbsp;<b>减少GC开销的措施</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#GC相关的JVM参数">7&nbsp;&nbsp;<b>GC相关的JVM参数</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#关于垃圾回收的几点补充">8&nbsp;&nbsp;<b>关于垃圾回收的几点补充</b></a>
+                    
+                </div>
+            </div>
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/imnice">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="Weibo" href="https://weibo.com">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="E-mail" href="mailto:imdangerous@163.com">
+                
+                <i class="fas fa-envelope"></i>
+                
+            </a>
+               
+            
+        </div>
     </div>
-    <div class="article-entry" itemprop="articleBody">
-      
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            JVM垃圾回收机制
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-10-18T04:08:42.000Z" itemprop="datePublished">10月 18 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            1 小时 读完 (约 6800 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
         <p> 浅谈JVM垃圾回收</p>
 <a id="more"></a>
 <h3 id="什么是垃圾回收（Garbage-Collection，GC）"><a href="#什么是垃圾回收（Garbage-Collection，GC）" class="headerlink" title="什么是垃圾回收（Garbage Collection，GC）"></a>什么是垃圾回收（Garbage Collection，GC）</h3><p>​    垃圾回收机制：在系统运行过程中，会产生一些无用的对象，这些对象占据着一定的内存，如果不对这些对象清理回收无用对象的内存，可能会导致内存的耗尽，所以垃圾回收机制回收的是内存。同时GC回收的是堆区和方法区的内存。</p>
@@ -266,203 +376,217 @@
 <p>　　（4）关键的也是难把握的问题是内存泄漏。良好的编程习惯和严谨的编程态度永远是最重要的，不要让自己的一个小错误导致内存出现大漏洞。</p>
 <p>　　（5）尽早释放无用对象的引用。大多数程序员在使用临时变量的时候，都是让引用变量在退出活动域(scope)后，自动设置为null，暗示垃圾收集器来收集该对象，还必须注意该引用的对象是否被监听，如果有，则要去掉监听器，然后再赋空值。</p>
 
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java基础/">Java基础</a></li></ul>
-
-      
-        
-	<div id="comment">
-		<!-- 来必力City版安装代码 -->
-		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
-		<script type="text/javascript">
-		   (function(d, s) {
-		       var j, e = d.getElementsByTagName(s)[0];
-
-		       if (typeof LivereTower === 'function') { return; }
-
-		       j = d.createElement(s);
-		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-		       j.async = true;
-
-		       e.parentNode.insertBefore(j, e);
-		   })(document, 'script');
-		</script>
-		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-		</div>
-		<!-- City版安装代码已完成 -->
-	</div>
-
-
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
     
-<nav id="article-nav">
-  
-    <a href="/2018/10/20/Java多线程常见的问题（一）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          Java多线程常见的问题（一）
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/10/17/二叉堆&堆排序/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">二叉堆&amp;堆排序</div>
-    </a>
-  
-</nav>
-
-  
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Java基础/">#Java基础</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/10/20/Java多线程常见的问题（一）/">Java多线程常见的问题（一）</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/10/17/二叉堆&堆排序/">二叉堆&amp;堆排序</a>
+            
+        </span>
+    </div>
+    
 </article>
 
-<!-- Table of Contents -->
 
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
-      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是垃圾回收（Garbage-Collection，GC）"><span class="nav-number">1.</span> <span class="nav-text">什么是垃圾回收（Garbage Collection，GC）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哪些内存需要回收"><span class="nav-number">2.</span> <span class="nav-text">哪些内存需要回收</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引用计数算法"><span class="nav-number">2.1.</span> <span class="nav-text">引用计数算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可达性分析算法"><span class="nav-number">2.2.</span> <span class="nav-text">可达性分析算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java中的引用你了解多少"><span class="nav-number">2.3.</span> <span class="nav-text">Java中的引用你了解多少</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象死亡（被回收）前的最后一次挣扎"><span class="nav-number">2.4.</span> <span class="nav-text">对象死亡（被回收）前的最后一次挣扎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法区如何判断是否需要回收"><span class="nav-number">2.5.</span> <span class="nav-text">方法区如何判断是否需要回收</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的垃圾收集算法"><span class="nav-number">3.</span> <span class="nav-text">常用的垃圾收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标记-清除算法"><span class="nav-number">3.1.</span> <span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制算法"><span class="nav-number">3.2.</span> <span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标记-整理算法"><span class="nav-number">3.3.</span> <span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分代收集算法"><span class="nav-number">3.4.</span> <span class="nav-text">分代收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#年轻代（Young-Generation）的回收算法"><span class="nav-number">3.4.1.</span> <span class="nav-text">年轻代（Young Generation）的回收算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#年老代（Old-Generation）的回收算法"><span class="nav-number">3.4.2.</span> <span class="nav-text">年老代（Old Generation）的回收算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#持久代（Permanent-Generation）的回收算法"><span class="nav-number">3.4.3.</span> <span class="nav-text">持久代（Permanent Generation）的回收算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的垃圾收集器"><span class="nav-number">4.</span> <span class="nav-text">常见的垃圾收集器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GC是什么时候触发的"><span class="nav-number">5.</span> <span class="nav-text">GC是什么时候触发的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#减少GC开销的措施"><span class="nav-number">6.</span> <span class="nav-text">减少GC开销的措施</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GC相关的JVM参数"><span class="nav-number">7.</span> <span class="nav-text">GC相关的JVM参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于垃圾回收的几点补充"><span class="nav-number">8.</span> <span class="nav-text">关于垃圾回收的几点补充</span></a></li></ol>
-    
+
+
     </div>
-  </aside>
 </section>
-        
-      </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2019 lsb&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
 
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/imnice">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
     </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
-    <footer id="footer" class="site-footer">
-  
-
-  <div class="clearfix container">
-      <div class="site-info">
-	      &copy; 2019 LSB.pro All Rights Reserved.
-        
-            <span id="busuanzi_container_site_uv">
-              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
-              本站总访问量<span id="busuanzi_value_site_pv"></span>次
-            </span>
-          
-      </div>
-      <div class="site-credit">
-        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
-      </div>
-  </div>
 </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
 
-
-<!-- min height -->
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
 
 <script>
-    var wrapdiv = document.getElementById("wrap");
-    var contentdiv = document.getElementById("content");
-
-    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-
-
-    <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
-    
-    
-</script>
-    
-<div style="display: none;">
-  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-</div>
-
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
     }
-  });
+    moment.locale("zh-CN");
 </script>
 
-<script type="text/x-mathjax-config">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
     MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
     });
 </script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
         }
-    });
-</script>
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+        }
 
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+      })
+    </script>
+
+    
+    
+
+    
 
 
 <script src="/js/script.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/main.js"></script>
 
-
-
-
-
-
-
-  <div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
-
-
-
-	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
-
-
-
-
-
-
-  </div>
-
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js" async=""></script>
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
 </body>
 </html>

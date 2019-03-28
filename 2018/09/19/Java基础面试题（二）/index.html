@@ -1,164 +1,334 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Java基础面试题（二） | LSB.pro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="keywords" content="面试题" />
-  
-  
-  
-  
-  <meta name="description" content="Java基础面试题（二）#附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
+    <meta charset="utf-8">
+<title>Java基础面试题（二） - LSB.pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="Java基础面试题（二）#附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
+
+
+
+<meta name="keywords" content="NB!">
+
+
+
+    <meta name="description" content="Java基础面试题（二）#附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
 <meta name="keywords" content="面试题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基础面试题（二）">
 <meta property="og:url" content="https://imnice.github.io/2018/09/19/Java基础面试题（二）/index.html">
 <meta property="og:site_name" content="LSB.pro">
 <meta property="og:description" content="Java基础面试题（二）#附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-cn">
 <meta property="og:updated_time" content="2018-09-19T12:53:59.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础面试题（二）">
 <meta name="twitter:description" content="Java基础面试题（二）#附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
-  
-    <link rel="alternate" href="/atom.xml" title="LSB.pro" type="application/atom+xml">
-  
-  <link rel="icon" href="/css/images/favicon.ico">
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
     
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/style.css">
+    
 
-  <script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css" >
-  <link rel="stylesheet" href="/css/fashion.css" >
-  <link rel="stylesheet" href="/css/glyphs.css" >
 
 </head>
-
-
-
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
-
-
-  
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
-
-
-<header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
-  <div class="clearfix container">
-      <div class="site-branding">
-
-          <h1 class="site-title">
-            
-              <a href="/" title="LSB.pro" rel="home"> LSB.pro </a>
-            
-          </h1>
-          
-          
-            
-          <nav id="main-navigation" class="main-navigation" role="navigation">
-            <a class="nav-open">Menu</a>
-            <a class="nav-close">Close</a>
-
-            <div class="clearfix sf-menu">
-              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    LSB.pro
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
-                    
-              </ul>
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </nav>
-
-      </div>
-  </div>
-</header>
-
-
-  <div id="container">
-    <div id="wrap">
+        </div>
+        
+        <div class="navbar-menu navbar-start">
             
-      <div id="content" class="outer">
+            <a class="navbar-item "
+               href="/">Home</a>
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/about">About</a>
+            
+        </div>
         
-          <section id="main" style="float:none;"><article id="post-Java基础面试题（二）" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" class="article-title" itemprop="name">
-      Java基础面试题（二）
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/09/19/Java基础面试题（二）/" class="article-date">
-	  <time datetime="2018-09-19T07:08:42.000Z" itemprop="datePublished">九月 19, 2018</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
- 
-      
-	<span id="busuanzi_container_page_pv">
-	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-	</span>
-
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="搜索" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="目录">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#操作系统中-heap-和-stack-的区别">1&nbsp;&nbsp;<b>操作系统中 heap 和 stack 的区别</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#什么是对象关系映射ORM">2&nbsp;&nbsp;<b>什么是对象关系映射ORM?</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#什么是-Java-的反射机制">3&nbsp;&nbsp;<b>什么是 Java 的反射机制</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#反射机制获取类有三种方法">4&nbsp;&nbsp;<b>反射机制获取类有三种方法</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#什么是数据库ACID">5&nbsp;&nbsp;<b>什么是数据库ACID?</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#BS与CS的联系与区别">6&nbsp;&nbsp;<b>BS与CS的联系与区别</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#cookie-和session-的区别">7&nbsp;&nbsp;<b>cookie 和session 的区别?</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#fail-fast-与-fail-safe-机制有什么区别">8&nbsp;&nbsp;<b>fail-fast 与 fail-safe 机制有什么区别</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#get-和-post请求的区别">9&nbsp;&nbsp;<b>get 和 post请求的区别</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#Interface与abstract类的区别">10&nbsp;&nbsp;<b>Interface与abstract类的区别</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#WEB容器主要有哪些功能-并请列出一些常见的WEB容器名字。">11&nbsp;&nbsp;<b>WEB容器主要有哪些功能? 并请列出一些常见的WEB容器名字。</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#一个”-java”源文件中是否可以包含多个类（不是内部类）？有什么限制？">12&nbsp;&nbsp;<b>一个”.java”源文件中是否可以包含多个类（不是内部类）？有什么限制？</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#请简述-Servlet-的生命周期及其相关的方法">13&nbsp;&nbsp;<b>请简述 Servlet 的生命周期及其相关的方法</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#简述ajax的原理及实现步骤。">14&nbsp;&nbsp;<b>简述ajax的原理及实现步骤。</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#什么是finalize-方法">15&nbsp;&nbsp;<b>什么是finalize()方法</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#final关键字有哪些用法">16&nbsp;&nbsp;<b>final关键字有哪些用法</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#main-方法为什么必须是静态的？能不能声明-main-方法为非静态">17&nbsp;&nbsp;<b>main() 方法为什么必须是静态的？能不能声明 main() 方法为非静态?</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#a-a-b-与-a-b-的区别">18&nbsp;&nbsp;<b>a = a + b 与 a += b 的区别</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#3-0-1-0-3-将会返回什么？true-还是-false？">19&nbsp;&nbsp;<b>3*0.1 == 0.3 将会返回什么？true 还是 false？</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#基础类型-Primitives-与封装类型-Wrappers-的区别">20&nbsp;&nbsp;<b>基础类型(Primitives)与封装类型(Wrappers)的区别</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#float和double的默认值是多少">21&nbsp;&nbsp;<b>float和double的默认值是多少</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#我能在不进行强制转换的情况下将一个-double-值赋值给-long-类型的变量吗？">22&nbsp;&nbsp;<b>我能在不进行强制转换的情况下将一个 double 值赋值给 long 类型的变量吗？</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#继承中类型转换的两种方式（向上转型、向下转型）">23&nbsp;&nbsp;<b>继承中类型转换的两种方式（向上转型、向下转型）</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#如何权衡是使用无序的数组还是有序的数组">24&nbsp;&nbsp;<b>如何权衡是使用无序的数组还是有序的数组</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#怎么判断数组是-null-还是为空">25&nbsp;&nbsp;<b>怎么判断数组是 null 还是为空</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#Java数组的三种打印方式">26&nbsp;&nbsp;<b>Java数组的三种打印方式</b></a>
+                    
+                </div>
+            </div>
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/imnice">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="Weibo" href="https://weibo.com">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="E-mail" href="mailto:imdangerous@163.com">
+                
+                <i class="fas fa-envelope"></i>
+                
+            </a>
+               
+            
+        </div>
     </div>
-    <div class="article-entry" itemprop="articleBody">
-      
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Java基础面试题（二）
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-09-19T07:08:42.000Z" itemprop="datePublished">9月 19 2018</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            1 小时 读完 (约 7519 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
         <p>Java基础面试题（二）</p>
 <a id="more"></a>
 <h3 id="操作系统中-heap-和-stack-的区别"><a href="#操作系统中-heap-和-stack-的区别" class="headerlink" title="操作系统中 heap 和 stack 的区别"></a>操作系统中 heap 和 stack 的区别</h3><p>堆为队列优先，先进先出（FIFO）。栈为先进后出（FILO）。<br> 一、空间分配：<br>​    1.堆（操作系统）：一般由程序员分配释放，若程序员不释放，程序结束时可能由OS回收，分配方式类似于链表。PS：java中都是系统GC，程序员无法进行GC。<br>​    2.栈（操作系统）：由操作系统自动分配释放，存放函数的参数值，局部变量值等。操作方式与数据结构中的栈相类似。<br>二、缓存方式：<br>​    1.堆：使用二级缓存，生命周期与虚拟机的GC算法有关（并不是引用为空就立即被GC），调用速度相对较低。<br>​    2.栈：使用一级缓存，被调用时通常处于存储空间中，调用后被立即释放。<br>三、数据结构：<br>​    1、堆（数据结构）：类似于树结构，可以类比于堆排序<br>​    2、栈（数据结构）：先进后出（FILO）<br>JAVA中的区别：<br>​    堆（heap）与栈（stack）都是java在RAM中用来存放数据的地方。与C++不同的是，java自动管理堆（heap）和（栈），程序员不能直接的设置堆和栈。<br>​    栈：在函数中定义的一些基本类型的变量和对象的引用变量都在函数的栈内存中分配。当在一段代码块中定义一个变量时，java就在栈中为这个变量分配内存空间，当超过变量的作用域后，Java会自动释放掉为该变量所分配的内存空间，该内存空间可以立即被用作他用。<br>​    堆：对内存用来存放由new创建的对象和数组，在堆中分配的内存，由java虚拟机的自动垃圾回收器来管理。在堆中产生一个数组或对象后，还可以在栈中定义一个特殊的变量，让栈中的这个变量的取值等于数组或对象在堆内存中的首地址，栈中的这个变量就成了数组或对象的引用变量。</p>
@@ -424,203 +594,217 @@
 <figure class="highlight plain hljs"><table><tr><td class="code"><pre><span class="line">int[] zero = null;  //数组类型的空引用，不指向任何对象</span><br></pre></td></tr></table></figure>
 <h3 id="Java数组的三种打印方式"><a href="#Java数组的三种打印方式" class="headerlink" title="Java数组的三种打印方式"></a>Java数组的三种打印方式</h3><figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">//传统的for循环方式</span></span><br><span class="line"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;array.length;i++)</span><br><span class="line">      System.out.println(a[i]);</span><br><span class="line"><span class="hljs-comment">//for each循环</span></span><br><span class="line"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> a:array)</span><br><span class="line">    System.out.println(a);</span><br><span class="line"><span class="hljs-comment">//利用Array类中的toString方法</span></span><br><span class="line"><span class="hljs-keyword">int</span>[] array = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;;</span><br><span class="line">System.out.println(Arrays.toString(array));</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
-
-      
-        
-	<div id="comment">
-		<!-- 来必力City版安装代码 -->
-		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
-		<script type="text/javascript">
-		   (function(d, s) {
-		       var j, e = d.getElementsByTagName(s)[0];
-
-		       if (typeof LivereTower === 'function') { return; }
-
-		       j = d.createElement(s);
-		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-		       j.async = true;
-
-		       e.parentNode.insertBefore(j, e);
-		   })(document, 'script');
-		</script>
-		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-		</div>
-		<!-- City版安装代码已完成 -->
-	</div>
-
-
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
     
-<nav id="article-nav">
-  
-    <a href="/2018/09/22/Java集合框架小结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          Java集合框架小结
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/09/18/数组整体右移K位问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">数组整体右移K位问题</div>
-    </a>
-  
-</nav>
-
-  
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/面试题/">#面试题</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2018/09/22/Java集合框架小结/">Java集合框架小结</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2018/09/18/数组整体右移K位问题/">数组整体右移K位问题</a>
+            
+        </span>
+    </div>
+    
 </article>
 
-<!-- Table of Contents -->
 
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
-      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统中-heap-和-stack-的区别"><span class="nav-number">1.</span> <span class="nav-text">操作系统中 heap 和 stack 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是对象关系映射ORM"><span class="nav-number">2.</span> <span class="nav-text">什么是对象关系映射ORM?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-Java-的反射机制"><span class="nav-number">3.</span> <span class="nav-text">什么是 Java 的反射机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反射机制获取类有三种方法"><span class="nav-number">4.</span> <span class="nav-text">反射机制获取类有三种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是数据库ACID"><span class="nav-number">5.</span> <span class="nav-text">什么是数据库ACID?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BS与CS的联系与区别"><span class="nav-number">6.</span> <span class="nav-text">BS与CS的联系与区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie-和session-的区别"><span class="nav-number">7.</span> <span class="nav-text">cookie 和session 的区别?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fail-fast-与-fail-safe-机制有什么区别"><span class="nav-number">8.</span> <span class="nav-text">fail-fast 与 fail-safe 机制有什么区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-和-post请求的区别"><span class="nav-number">9.</span> <span class="nav-text">get 和 post请求的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interface与abstract类的区别"><span class="nav-number">10.</span> <span class="nav-text">Interface与abstract类的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WEB容器主要有哪些功能-并请列出一些常见的WEB容器名字。"><span class="nav-number">11.</span> <span class="nav-text">WEB容器主要有哪些功能? 并请列出一些常见的WEB容器名字。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个”-java”源文件中是否可以包含多个类（不是内部类）？有什么限制？"><span class="nav-number">12.</span> <span class="nav-text">一个”.java”源文件中是否可以包含多个类（不是内部类）？有什么限制？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请简述-Servlet-的生命周期及其相关的方法"><span class="nav-number">13.</span> <span class="nav-text">请简述 Servlet 的生命周期及其相关的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简述ajax的原理及实现步骤。"><span class="nav-number">14.</span> <span class="nav-text">简述ajax的原理及实现步骤。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是finalize-方法"><span class="nav-number">15.</span> <span class="nav-text">什么是finalize()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final关键字有哪些用法"><span class="nav-number">16.</span> <span class="nav-text">final关键字有哪些用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#main-方法为什么必须是静态的？能不能声明-main-方法为非静态"><span class="nav-number">17.</span> <span class="nav-text">main() 方法为什么必须是静态的？能不能声明 main() 方法为非静态?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a-a-b-与-a-b-的区别"><span class="nav-number">18.</span> <span class="nav-text">a = a + b 与 a += b 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-0-1-0-3-将会返回什么？true-还是-false？"><span class="nav-number">19.</span> <span class="nav-text">3*0.1 == 0.3 将会返回什么？true 还是 false？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础类型-Primitives-与封装类型-Wrappers-的区别"><span class="nav-number">20.</span> <span class="nav-text">基础类型(Primitives)与封装类型(Wrappers)的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#float和double的默认值是多少"><span class="nav-number">21.</span> <span class="nav-text">float和double的默认值是多少</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我能在不进行强制转换的情况下将一个-double-值赋值给-long-类型的变量吗？"><span class="nav-number">22.</span> <span class="nav-text">我能在不进行强制转换的情况下将一个 double 值赋值给 long 类型的变量吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承中类型转换的两种方式（向上转型、向下转型）"><span class="nav-number">23.</span> <span class="nav-text">继承中类型转换的两种方式（向上转型、向下转型）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何权衡是使用无序的数组还是有序的数组"><span class="nav-number">24.</span> <span class="nav-text">如何权衡是使用无序的数组还是有序的数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么判断数组是-null-还是为空"><span class="nav-number">25.</span> <span class="nav-text">怎么判断数组是 null 还是为空</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java数组的三种打印方式"><span class="nav-number">26.</span> <span class="nav-text">Java数组的三种打印方式</span></a></li></ol>
-    
+
+
     </div>
-  </aside>
 </section>
-        
-      </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2019 lsb&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
 
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/imnice">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
     </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
-    <footer id="footer" class="site-footer">
-  
-
-  <div class="clearfix container">
-      <div class="site-info">
-	      &copy; 2019 LSB.pro All Rights Reserved.
-        
-            <span id="busuanzi_container_site_uv">
-              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
-              本站总访问量<span id="busuanzi_value_site_pv"></span>次
-            </span>
-          
-      </div>
-      <div class="site-credit">
-        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
-      </div>
-  </div>
 </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
 
-
-<!-- min height -->
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
 
 <script>
-    var wrapdiv = document.getElementById("wrap");
-    var contentdiv = document.getElementById("content");
-
-    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-
-
-    <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
-    
-    
-</script>
-    
-<div style="display: none;">
-  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-</div>
-
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
     }
-  });
+    moment.locale("zh-CN");
 </script>
 
-<script type="text/x-mathjax-config">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
     MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
     });
 </script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
         }
-    });
-</script>
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+        }
 
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+      })
+    </script>
+
+    
+    
+
+    
 
 
 <script src="/js/script.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/main.js"></script>
 
-
-
-
-
-
-
-  <div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
-
-
-
-	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
-
-
-
-
-
-
-  </div>
-
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js" async=""></script>
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
 </body>
 </html>
