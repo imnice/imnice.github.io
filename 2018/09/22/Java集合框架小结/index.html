@@ -1,307 +1,341 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
-<head>
-    <meta charset="utf-8">
-<title>Java集合框架小结 - LSB.pro</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-cn">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java基础," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LSB.pro" type="application/atom+xml" />
+
+
 
 
 
 
 <meta name="description" content="Java集合框架小结   如：12345678 右移2位  78123456">
+<meta name="keywords" content="Java基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java集合框架小结">
+<meta property="og:url" content="https://imnice.github.io/2018/09/22/Java集合框架小结/index.html">
+<meta property="og:site_name" content="LSB.pro">
+<meta property="og:description" content="Java集合框架小结   如：12345678 右移2位  78123456">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/Zok**qYH9ruKdeJvc7MbFVvwm4wYpnvArjdbQo9aT0I!/r/dEYBAAAAAAAA">
+<meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/daAryZn4OBx.tezR2DldFP7oBvXLNe8o*c.49gG*H48!/r/dDEBAAAAAAAA">
+<meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/pYoXA.4eoJeFW*hdgi24opN2fdEWeqN0zaqlCLLMKrk!/r/dFMBAAAAAAAA">
+<meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/OOReCP4mZlZFnQ.jd0EtCUsFnUe9WCSNplenB*5WLjU!/r/dFMBAAAAAAAA">
+<meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/q1If0xezU6uoj1mCzGxHPWZ3eL2xp.jbiLDWJWxuuwA!/r/dDQBAAAAAAAA">
+<meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/t4Zntx2MjRsXdqDaiF3x9Y*DX.1.4okbpt5nS7EL3tA!/r/dDIBAAAAAAAA">
+<meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/.DTFINp98MPSDbx82xqvaPbaIwYYCs7rjJ9qdOmIkFI!/r/dDQBAAAAAAAA">
+<meta property="og:updated_time" content="2018-09-25T06:24:42.703Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java集合框架小结">
+<meta name="twitter:description" content="Java集合框架小结   如：12345678 右移2位  78123456">
+<meta name="twitter:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/Zok**qYH9ruKdeJvc7MbFVvwm4wYpnvArjdbQo9aT0I!/r/dEYBAAAAAAAA">
 
 
 
-<meta name="keywords" content="NB!">
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://imnice.github.io/2018/09/22/Java集合框架小结/"/>
+
+
+
+
+
+  <title>Java集合框架小结 | LSB.pro</title>
+  
 
 
 
 
 
 
-
-<link rel="icon" href="/favicon.png">
-
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-
-<link rel="stylesheet" href="/css/style.css">
-
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
 
 
 </head>
-<body>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+
+  
+  
     
-<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
-                
-                    
-                    LSB.pro
-                    
-                
-            </a>
-            <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="navbar-menu navbar-start">
-            
-            <a class="navbar-item "
-               href="/">Home</a>
-            
-            <a class="navbar-item "
-               href="/archives">Archives</a>
-            
-            <a class="navbar-item "
-               href="/tags">Tags</a>
-            
-            <a class="navbar-item "
-               href="/categories">Categories</a>
-            
-            <a class="navbar-item "
-               href="/about">About</a>
-            
-        </div>
-        
-        <div class="navbar-menu navbar-end">
-            
-            <a class="navbar-item search" title="搜索" href="javascript:;">
-                <i class="fas fa-search"></i>
-            </a>
-            
-            
-            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
-                <a class="navbar-item" title="目录">
-                    <i class="fa fa-list"></i>
-                </a>
-                <div class="navbar-dropdown is-right">
-                    
-                    
-                    
-                    
-                    <a class="navbar-item" href="#Vector、ArrayList和LinkedList的比较">1&nbsp;&nbsp;<b>Vector、ArrayList和LinkedList的比较</b></a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#ArrayList-与-LinkedList">1.1&nbsp;&nbsp;ArrayList 与 LinkedList</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#synchronizedList封装ArrayList（LinkedList）得到线程安全的List">1.2&nbsp;&nbsp;synchronizedList封装ArrayList（LinkedList）得到线程安全的List</a>
-                    
-                    
-                    <hr class="navbar-divider">
-                    
-                    
-                    <a class="navbar-item" href="#HashMap浅析">2&nbsp;&nbsp;<b>HashMap浅析</b></a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#数据存储结构">2.1&nbsp;&nbsp;数据存储结构</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#重要参数">2.2&nbsp;&nbsp;重要参数</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#HashMap的put方法">2.3&nbsp;&nbsp;HashMap的put方法</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#HashMap与HashTable">2.4&nbsp;&nbsp;HashMap与HashTable</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#什么是-fail-fast-机制">2.5&nbsp;&nbsp;什么是 fail-fast 机制?</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#小结">2.6&nbsp;&nbsp;小结</a>
-                    
-                    
-                    <hr class="navbar-divider">
-                    
-                    
-                    <a class="navbar-item" href="#ConcurrentHashMap浅析">3&nbsp;&nbsp;<b>ConcurrentHashMap浅析</b></a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#存储结构">3.1&nbsp;&nbsp;存储结构</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#size-操作">3.2&nbsp;&nbsp;size 操作</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#同步方式">3.3&nbsp;&nbsp;同步方式</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#JDK-1-8-的改动">3.4&nbsp;&nbsp;JDK 1.8 的改动</a>
-                    
-                    
-                    <hr class="navbar-divider">
-                    
-                    
-                    <a class="navbar-item" href="#HashSet">4&nbsp;&nbsp;<b>HashSet</b></a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#成员变量">4.1&nbsp;&nbsp;成员变量</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#构造函数">4.2&nbsp;&nbsp;构造函数</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#add">4.3&nbsp;&nbsp;add()</a>
-                    
-                    
-                    <hr class="navbar-divider">
-                    
-                    
-                    <a class="navbar-item" href="#LinkedHashMap经典用法">5&nbsp;&nbsp;<b>LinkedHashMap经典用法</b></a>
-                    
-                    
-                    <hr class="navbar-divider">
-                    
-                    
-                    <a class="navbar-item" href="#容器中的设计模式">6&nbsp;&nbsp;<b>容器中的设计模式</b></a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#迭代器模式">6.1&nbsp;&nbsp;迭代器模式</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#适配器模式">6.2&nbsp;&nbsp;适配器模式</a>
-                    
-                    
-                    <hr class="navbar-divider">
-                    
-                    
-                    <a class="navbar-item" href="#面试指南">7&nbsp;&nbsp;<b>面试指南</b></a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#1-ArrayList和LinkedList区别">7.1&nbsp;&nbsp;1. ArrayList和LinkedList区别</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#2-HashMap和HashTable区别，HashMap的key类型">7.2&nbsp;&nbsp;2. HashMap和HashTable区别，HashMap的key类型</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#3-HashMap和ConcurrentHashMap">7.3&nbsp;&nbsp;3. HashMap和ConcurrentHashMap</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#4-Hashtable的原理">7.4&nbsp;&nbsp;4. Hashtable的原理</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#5-Hash冲突的解决办法">7.5&nbsp;&nbsp;5. Hash冲突的解决办法</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#6-什么是迭代器">7.6&nbsp;&nbsp;6. 什么是迭代器</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#7-构造相同hash的字符串进行攻击，这种情况应该怎么处理？JDK7如何处理">7.7&nbsp;&nbsp;7. 构造相同hash的字符串进行攻击，这种情况应该怎么处理？JDK7如何处理</a>
-                    
-                    
-                    
-                    <a class="navbar-item" href="#8-Hashmap为什么大小是2的幂次">7.8&nbsp;&nbsp;8. Hashmap为什么大小是2的幂次</a>
-                    
-                </div>
-            </div>
-            
-            
-            <a class="navbar-item" title="GitHub" href="https://github.com/imnice">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-               
-            <a class="navbar-item" title="Weibo" href="https://weibo.com">
-                
-                <i class="fab fa-weibo"></i>
-                
-            </a>
-               
-            <a class="navbar-item" title="E-mail" href="mailto:imdangerous@163.com">
-                
-                <i class="fas fa-envelope"></i>
-                
-            </a>
-               
-            
-        </div>
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LSB.pro</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
 
-    <section class="section">
-    <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            Java集合框架小结
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2018-09-22T04:08:42.000Z" itemprop="datePublished">9月 22 2018</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
             
-            
-            1 小时 读完 (约 8784 字)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+
+  <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://imnice.github.io/2018/09/22/Java集合框架小结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lsb">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LSB.pro">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java集合框架小结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-22T12:08:42+08:00">
+                2018-09-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/默认分类/" itemprop="url" rel="index">
+                    <span itemprop="name">默认分类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  Java集合框架小结   如：12345678 右移2位  78123456
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         <p>Java集合框架小结</p>
 <a id="more"></a>
 <p><img src="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/Zok**qYH9ruKdeJvc7MbFVvwm4wYpnvArjdbQo9aT0I!/r/dEYBAAAAAAAA" alt="Java集合框架图"></p>
@@ -615,217 +649,390 @@
 <p>那么根据 &amp; 位运算的规则，都为 1 (真)时，才为 1，那 0≤运算后的结果≤15，假设 h &lt;= 15，那么运算后的结果就是 h 本身，h &gt;15，运算后的结果就是最后四位二进制做 &amp; 运算后的值，最终，就是 % 运算后的余数。</p>
 <p>当容量一定是 2的幂次时，h &amp; (length - 1) == h % length</p>
 
-    
-    </div>
-    
-    <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Java基础/">#Java基础</a></span>
-    
+      
     </div>
     
     
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
-            
-            <a href="/2018/09/25/计算机网络基础/">计算机网络基础</a>
-            
-        </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/2018/09/19/Java基础面试题（二）/">Java基础面试题（二）</a>
-            
-        </span>
-    </div>
     
-</article>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java基础/" rel="tag"># Java基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/19/Java基础面试题（二）/" rel="next" title="Java基础面试题（二）">
+                <i class="fa fa-chevron-left"></i> Java基础面试题（二）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/25/计算机网络基础/" rel="prev" title="计算机网络基础">
+                计算机网络基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-
+    <div class="post-spread">
+      
     </div>
-</section>
-    <footer class="footer">
-    <div class="container">
-        <div class="columns content">
-            <div class="column is-narrow has-text-centered">
-                &copy; 2019 lsb&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
-                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
-            </div>
-            <div class="column is-hidden-mobile"></div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">lsb</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
 
             
-            <div class="column is-narrow">
-                <div class="columns is-mobile is-multiline is-centered">
-                
-                    
-                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/imnice">
-                    
-                    GitHub
-                    
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
                 
-                </div>
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
             </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
             
+              
             
-        </div>
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vector、ArrayList和LinkedList的比较"><span class="nav-number">1.</span> <span class="nav-text">Vector、ArrayList和LinkedList的比较</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ArrayList-与-LinkedList"><span class="nav-number">1.1.</span> <span class="nav-text">ArrayList 与 LinkedList</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronizedList封装ArrayList（LinkedList）得到线程安全的List"><span class="nav-number">1.2.</span> <span class="nav-text">synchronizedList封装ArrayList（LinkedList）得到线程安全的List</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap浅析"><span class="nav-number">2.</span> <span class="nav-text">HashMap浅析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据存储结构"><span class="nav-number">2.1.</span> <span class="nav-text">数据存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重要参数"><span class="nav-number">2.2.</span> <span class="nav-text">重要参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HashMap的put方法"><span class="nav-number">2.3.</span> <span class="nav-text">HashMap的put方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HashMap与HashTable"><span class="nav-number">2.4.</span> <span class="nav-text">HashMap与HashTable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是-fail-fast-机制"><span class="nav-number">2.5.</span> <span class="nav-text">什么是 fail-fast 机制?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">2.6.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ConcurrentHashMap浅析"><span class="nav-number">3.</span> <span class="nav-text">ConcurrentHashMap浅析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存储结构"><span class="nav-number">3.1.</span> <span class="nav-text">存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#size-操作"><span class="nav-number">3.2.</span> <span class="nav-text">size 操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同步方式"><span class="nav-number">3.3.</span> <span class="nav-text">同步方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JDK-1-8-的改动"><span class="nav-number">3.4.</span> <span class="nav-text">JDK 1.8 的改动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet"><span class="nav-number">4.</span> <span class="nav-text">HashSet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#成员变量"><span class="nav-number">4.1.</span> <span class="nav-text">成员变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数"><span class="nav-number">4.2.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#add"><span class="nav-number">4.3.</span> <span class="nav-text">add()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedHashMap经典用法"><span class="nav-number">5.</span> <span class="nav-text">LinkedHashMap经典用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器中的设计模式"><span class="nav-number">6.</span> <span class="nav-text">容器中的设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器模式"><span class="nav-number">6.1.</span> <span class="nav-text">迭代器模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#适配器模式"><span class="nav-number">6.2.</span> <span class="nav-text">适配器模式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试指南"><span class="nav-number">7.</span> <span class="nav-text">面试指南</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-ArrayList和LinkedList区别"><span class="nav-number">7.1.</span> <span class="nav-text">1. ArrayList和LinkedList区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-HashMap和HashTable区别，HashMap的key类型"><span class="nav-number">7.2.</span> <span class="nav-text">2. HashMap和HashTable区别，HashMap的key类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-HashMap和ConcurrentHashMap"><span class="nav-number">7.3.</span> <span class="nav-text">3. HashMap和ConcurrentHashMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Hashtable的原理"><span class="nav-number">7.4.</span> <span class="nav-text">4. Hashtable的原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Hash冲突的解决办法"><span class="nav-number">7.5.</span> <span class="nav-text">5. Hash冲突的解决办法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-什么是迭代器"><span class="nav-number">7.6.</span> <span class="nav-text">6. 什么是迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-构造相同hash的字符串进行攻击，这种情况应该怎么处理？JDK7如何处理"><span class="nav-number">7.7.</span> <span class="nav-text">7. 构造相同hash的字符串进行攻击，这种情况应该怎么处理？JDK7如何处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-Hashmap为什么大小是2的幂次"><span class="nav-number">7.8.</span> <span class="nav-text">8. Hashmap为什么大小是2的幂次</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
     </div>
-</footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+  </aside>
 
-<!-- test if the browser is outdated -->
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lsb</span>
+
+  
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // plugin function, place inside DOM ready function
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'flex'
-        })
-    });
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script>
-    window.FontAwesomeConfig = {
-        searchPseudoElements: true
-    }
-    moment.locale("zh-CN");
-</script>
 
 
-    
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {matchFontHeight: false},
-        SVG: {matchFontHeight: false},
-        CommonHTML: {matchFontHeight: false}
-    });
-</script>
-
-    
-    
-    
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            if (typeof($.fn.lightGallery) === 'function') {
-                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof($.fn.justifiedGallery) === 'function') {
-                $('.justified-gallery').justifiedGallery();
-            }
-        });
-    })(jQuery);
-</script>
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <style>
-        .hljs {
-            position: relative;
-        }
-
-        .hljs .clipboard-btn {
-            float: right;
-            color: #9a9a9a;
-            background: none;
-            border: none;
-        }
-
-        .hljs > .clipboard-btn {
-            display: none;
-            position: absolute;
-            right: 4px;
-            top: 4px;
-        }
-
-        .hljs:hover > .clipboard-btn {
-            display: inline;
-        }
-
-        .hljs > figcaption > .clipboard-btn {
-            margin-right: 4px;
-        }
-    </style>
-    <script>
-      $(document).ready(function () {
-        $('figure.hljs').each(function(i, figure) {
-          var codeId = 'code-' + i;
-          var code = figure.querySelector('.code');
-          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
-          code.id = codeId;
-          copyButton.addClass('clipboard-btn');
-          copyButton.attr('data-clipboard-target-id', codeId);
-
-          var figcaption = figure.querySelector('figcaption');
-
-          if (figcaption) {
-            figcaption.append(copyButton[0]);
-          } else {
-            figure.prepend(copyButton[0]);
-          }
-        })
-
-        var clipboard = new ClipboardJS('.clipboard-btn', {
-          target: function(trigger) {
-            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
-          }
-        });
-      })
-    </script>
-
-    
-    
-
-    
 
 
-<script src="/js/script.js"></script>
 
-    
-    <div class="searchbox ins-search">
-    <div class="searchbox-mask"></div>
-    <div class="searchbox-container ins-search-container">
-        <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-    (function (window) {
-        var INSIGHT_CONFIG = {
-            TRANSLATION: {
-                POSTS: '文章',
-                PAGES: '页面',
-                CATEGORIES: '分类',
-                TAGS: '标签',
-                UNTITLED: '(无标题)',
-            },
-            CONTENT_URL: '/content.json',
-        };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
-</script>
-<script src="/js/insight.js"></script>
-    
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
