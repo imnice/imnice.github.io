@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-cn">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -53,16 +53,12 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
 
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
 
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -74,7 +70,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="LSB.pro" type="application/atom+xml" />
+  <link rel="alternate" href="https://github.com/" title="LSB.pro" type="application/atom+xml" />
 
 
 
@@ -88,7 +84,7 @@
 <meta property="og:url" content="https://imnice.github.io/2018/10/17/二叉堆&堆排序/index.html">
 <meta property="og:site_name" content="LSB.pro">
 <meta property="og:description" content="二叉堆&amp;堆排序#附加一段摘要，140字以内，会出现在meta的description里面">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/02RjZmVOmzSQNBkjFfj6s4Fxdvncll2CEULtl5EqwTA!/r/dFQBAAAAAAAA">
 <meta property="og:image" content="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/S7ORZliSIO7GgjL3ahPlJKvOKQCpJCdw31cFxxLvyHc!/r/dDUBAAAAAAAA">
 <meta property="og:image" content="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/W8nJQHVrmQOaHUq9CfuKDUfrXXQNUqYXFTkhFiGQsAE!/r/dFIBAAAAAAAA">
@@ -127,15 +123,15 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -148,8 +144,6 @@
 </script>
 
 
-
-  <link rel="canonical" href="https://imnice.github.io/2018/10/17/二叉堆&堆排序/"/>
 
 
 
@@ -167,7 +161,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -215,7 +209,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -225,15 +219,89 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
           </a>
         </li>
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -289,9 +357,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-17T12:08:42+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-17T12:08:42+08:00">
                 2018-10-17
               </time>
             
@@ -310,7 +378,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -406,7 +474,7 @@
 <p>8 = 3*2+2</p>
 <p>刚好符合规律。</p>
 <p>有了这个前提，下面的代码就更好理解了：</p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeapOperator</span> </span>&#123;</span><br><span class="line">	<span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * 上浮调整</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> array</span></span><br><span class="line"><span class="hljs-comment">	 *            待调整的堆</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 */</span></span><br><span class="line"></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">upAdjust</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-keyword">int</span> childIndex = array.length - <span class="hljs-number">1</span>;</span><br><span class="line">		<span class="hljs-keyword">int</span> parentIndex = (childIndex - <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;</span><br><span class="line">		<span class="hljs-comment">// temp保存插入的叶子节点值，用于最后的赋值</span></span><br><span class="line">		<span class="hljs-keyword">int</span> temp = array[childIndex];</span><br><span class="line">		<span class="hljs-keyword">while</span> (childIndex &gt; <span class="hljs-number">0</span> &amp;&amp; temp &lt; array[parentIndex]) &#123;</span><br><span class="line">			<span class="hljs-comment">// 无需真正交换，单向赋值即可</span></span><br><span class="line">			array[childIndex] = array[parentIndex];</span><br><span class="line">			childIndex = parentIndex;</span><br><span class="line">			parentIndex = (parentIndex - <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		array[childIndex] = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * 下沉调整</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> array</span></span><br><span class="line"><span class="hljs-comment">	 *            待调整的堆</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="hljs-comment">	 *            要下沉的父节点</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="hljs-comment">	 *            堆的有效大小</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 */</span></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">downAdjust</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> parentIndex, <span class="hljs-keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-comment">// temp保存父节点值，用于最后的赋值</span></span><br><span class="line">		<span class="hljs-keyword">int</span> temp = array[parentIndex];</span><br><span class="line">		<span class="hljs-keyword">int</span> childIndex = <span class="hljs-number">2</span> * parentIndex + <span class="hljs-number">1</span>;</span><br><span class="line">		<span class="hljs-keyword">while</span> (childIndex &lt; length) &#123;</span><br><span class="line">			<span class="hljs-comment">// 如果有右孩子，且右孩子小于左孩子的值，则定位到右孩子</span></span><br><span class="line">			<span class="hljs-keyword">if</span> (childIndex + <span class="hljs-number">1</span> &lt; length &amp;&amp; array[childIndex + <span class="hljs-number">1</span>] &lt; array[childIndex]) &#123;</span><br><span class="line">				childIndex++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="hljs-comment">// 如果父节点小于任何一个孩子的值，直接跳出</span></span><br><span class="line">			<span class="hljs-keyword">if</span> (temp &lt;= array[childIndex])</span><br><span class="line">				<span class="hljs-keyword">break</span>;</span><br><span class="line">			<span class="hljs-comment">// 无需真正交换，单向赋值即可</span></span><br><span class="line">			array[parentIndex] = array[childIndex];</span><br><span class="line">			parentIndex = childIndex;</span><br><span class="line">			childIndex = <span class="hljs-number">2</span> * childIndex + <span class="hljs-number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		array[parentIndex] = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * 构建堆</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> array</span></span><br><span class="line"><span class="hljs-comment">	 *            待调整的堆</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 */</span></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildHeap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-comment">// 从最后一个非叶子节点开始，依次下沉调整</span></span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = array.length / <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;</span><br><span class="line">			downAdjust(array, i, array.length - <span class="hljs-number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-keyword">int</span>[] array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123; <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span> &#125;;</span><br><span class="line">		upAdjust(array);</span><br><span class="line">		System.out.println(Arrays.toString(array)); <span class="hljs-comment">// [0, 1, 2, 6, 3, 7, 8, 9, 10, 5]</span></span><br><span class="line">		array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123; <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span> &#125;;</span><br><span class="line">		buildHeap(array);</span><br><span class="line">		System.out.println(Arrays.toString(array)); <span class="hljs-comment">// [1, 5, 2, 9, 7, 3, 8, 10, 6]</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapOperator</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * 上浮调整</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> array</span></span><br><span class="line"><span class="comment">	 *            待调整的堆</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">upAdjust</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> childIndex = array.length - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> parentIndex = (childIndex - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">		<span class="comment">// temp保存插入的叶子节点值，用于最后的赋值</span></span><br><span class="line">		<span class="keyword">int</span> temp = array[childIndex];</span><br><span class="line">		<span class="keyword">while</span> (childIndex &gt; <span class="number">0</span> &amp;&amp; temp &lt; array[parentIndex]) &#123;</span><br><span class="line">			<span class="comment">// 无需真正交换，单向赋值即可</span></span><br><span class="line">			array[childIndex] = array[parentIndex];</span><br><span class="line">			childIndex = parentIndex;</span><br><span class="line">			parentIndex = (parentIndex - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		array[childIndex] = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * 下沉调整</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> array</span></span><br><span class="line"><span class="comment">	 *            待调整的堆</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="comment">	 *            要下沉的父节点</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="comment">	 *            堆的有效大小</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">downAdjust</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> parentIndex, <span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// temp保存父节点值，用于最后的赋值</span></span><br><span class="line">		<span class="keyword">int</span> temp = array[parentIndex];</span><br><span class="line">		<span class="keyword">int</span> childIndex = <span class="number">2</span> * parentIndex + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (childIndex &lt; length) &#123;</span><br><span class="line">			<span class="comment">// 如果有右孩子，且右孩子小于左孩子的值，则定位到右孩子</span></span><br><span class="line">			<span class="keyword">if</span> (childIndex + <span class="number">1</span> &lt; length &amp;&amp; array[childIndex + <span class="number">1</span>] &lt; array[childIndex]) &#123;</span><br><span class="line">				childIndex++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 如果父节点小于任何一个孩子的值，直接跳出</span></span><br><span class="line">			<span class="keyword">if</span> (temp &lt;= array[childIndex])</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="comment">// 无需真正交换，单向赋值即可</span></span><br><span class="line">			array[parentIndex] = array[childIndex];</span><br><span class="line">			parentIndex = childIndex;</span><br><span class="line">			childIndex = <span class="number">2</span> * childIndex + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		array[parentIndex] = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * 构建堆</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> array</span></span><br><span class="line"><span class="comment">	 *            待调整的堆</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">buildHeap</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 从最后一个非叶子节点开始，依次下沉调整</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = array.length / <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">			downAdjust(array, i, array.length - <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">0</span> &#125;;</span><br><span class="line">		upAdjust(array);</span><br><span class="line">		System.out.println(Arrays.toString(array)); <span class="comment">// [0, 1, 2, 6, 3, 7, 8, 9, 10, 5]</span></span><br><span class="line">		array = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">7</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">6</span> &#125;;</span><br><span class="line">		buildHeap(array);</span><br><span class="line">		System.out.println(Arrays.toString(array)); <span class="comment">// [1, 5, 2, 9, 7, 3, 8, 10, 6]</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>代码中有一个优化的点，就是父节点和孩子节点做连续交换时，并不一定要真的交换，只需要先把交换一方的值存入temp变量，做单向覆盖，循环结束后，再把temp的值存入交换后的最终位置。 </p>
 <p><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/e7r5RCp3eQqlz2Auyz6DC6N4PuC1vXxf84*7oltoTSs!/r/dDcBAAAAAAAA" alt=""></p>
 <h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p>让我们回顾一下二叉堆和最大堆的特性：</p>
@@ -422,7 +490,7 @@
 <p><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/yl8kQoHM01YIwefBAObIEcHfxzXvF3U6ittLrMZnBog!/r/dEYBAAAAAAAA" alt=""></p>
 <p>删除节点7，节点6成为新堆顶：<br><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/JRjPVSkI95TsE.CD8*VVCbk3zGavgGsWMswyxQYT3mI!/r/dDUBAAAAAAAA" alt=""><br>删除节点6，节点5成为新堆顶：<br><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/h.gFjSctKHZPA6ZkC79GIP2gQl88cLTDIjcSdCjircI!/r/dDYBAAAAAAAA" alt=""><br>删除节点5，节点4成为新堆顶：<br><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/lCsGoEbu*QzECIafWT6.NlmXASm3EhNeX4NxKkF2mLs!/r/dGcBAAAAAAAA" alt=""><br>删除节点4，节点3成为新堆顶：<br><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/495RsjfPb.zPXo2dndGn31lQSFdbdInsxjUNk*6R1JE!/r/dDQBAAAAAAAA" alt=""><br>删除节点3，节点2成为新堆顶：<br><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/D3jKAsqkLdxI9jmhywQ9cVS8z1kyR26DgzSpm7d3B5M!/r/dEgBAAAAAAAA" alt=""><br>到此为止，我们原本的最大堆已经变成了一个从小到大的有序集合。之前说过二叉堆实际存储在数组当中，数组中的元素排列如下：<br><img src="http://r.photo.store.qq.com/psb?/V11NCZYQ4KWZ6n/HsjV9J2G8*GicJDfu6ztv1uS09ThbSbqhhSWArJrfUk!/r/dFIBAAAAAAAA" alt=""><br>由此，我们可以归纳出堆排序算法的步骤：<br><strong>1. 把无序数组构建成二叉堆。</strong><br><strong>2. 循环删除堆顶元素，移到集合尾部，调节堆产生新的堆顶。</strong></p>
 <p>代码在二叉堆操作的基础上稍加改动就行</p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeapSort</span> </span>&#123;</span><br><span class="line">	<span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">	 * 下沉调整</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> array</span></span><br><span class="line"><span class="hljs-comment">	 *            待调整的堆</span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="hljs-comment">	 *            要下沉的父节点</span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="hljs-comment">	 *            堆的有效大小</span></span><br><span class="line"><span class="hljs-comment">	 */</span></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">downAdjust</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> parentIndex, <span class="hljs-keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-comment">// temp保存父节点值，用于最后的赋值</span></span><br><span class="line">		<span class="hljs-keyword">int</span> temp = array[parentIndex];</span><br><span class="line">		<span class="hljs-keyword">int</span> childIndex = <span class="hljs-number">2</span> * parentIndex + <span class="hljs-number">1</span>;</span><br><span class="line">		<span class="hljs-keyword">while</span> (childIndex &lt; length) &#123;</span><br><span class="line">			<span class="hljs-comment">// 如果有右孩子，且右孩子大于左孩子的值，则定位到右孩子</span></span><br><span class="line">			<span class="hljs-keyword">if</span> (childIndex + <span class="hljs-number">1</span> &lt; length &amp;&amp; array[childIndex + <span class="hljs-number">1</span>] &gt; array[childIndex]) &#123;</span><br><span class="line">				childIndex++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="hljs-comment">// 如果父节点小于任何一个孩子的值，直接跳出</span></span><br><span class="line">			<span class="hljs-keyword">if</span> (temp &gt;= array[childIndex])</span><br><span class="line">				<span class="hljs-keyword">break</span>;</span><br><span class="line">			<span class="hljs-comment">// 无需真正交换，单向赋值即可</span></span><br><span class="line">			array[parentIndex] = array[childIndex];</span><br><span class="line">			parentIndex = childIndex;</span><br><span class="line">			childIndex = <span class="hljs-number">2</span> * childIndex + <span class="hljs-number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		array[parentIndex] = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">	 * 堆排序</span></span><br><span class="line"><span class="hljs-comment">	 * </span></span><br><span class="line"><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> array</span></span><br><span class="line"><span class="hljs-comment">	 *            待调整的堆</span></span><br><span class="line"><span class="hljs-comment">	 */</span></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">heapSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-comment">// 1.把无序数组构建成二叉堆。</span></span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = (array.length - <span class="hljs-number">2</span>) / <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;</span><br><span class="line">			downAdjust(array, i, array.length);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(Arrays.toString(array)); <span class="hljs-comment">// [10, 9, 8, 6, 5, 7, 2, 3, 1, 0]</span></span><br><span class="line"></span><br><span class="line">		<span class="hljs-comment">// 2.循环删除堆顶元素，移到集合尾部，调节堆产生新的堆顶。</span></span><br><span class="line"></span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = array.length - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) &#123;</span><br><span class="line">			<span class="hljs-comment">// 最后一个元素和第一元素进行交换</span></span><br><span class="line">			<span class="hljs-keyword">int</span> temp = array[i];</span><br><span class="line">			array[i] = array[<span class="hljs-number">0</span>];</span><br><span class="line">			array[<span class="hljs-number">0</span>] = temp;</span><br><span class="line">			<span class="hljs-comment">// 下沉调整最大堆</span></span><br><span class="line">			downAdjust(array, <span class="hljs-number">0</span>, i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123; <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span> &#125;; <span class="hljs-comment">// [0, 1, 2, 3, 5, 6, 7, 8, 9, 10]</span></span><br><span class="line">		heapSort(arr);</span><br><span class="line">		System.out.println(Arrays.toString(arr));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 下沉调整</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> array</span></span><br><span class="line"><span class="comment">	 *            待调整的堆</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="comment">	 *            要下沉的父节点</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> parentIndex</span></span><br><span class="line"><span class="comment">	 *            堆的有效大小</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">downAdjust</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> parentIndex, <span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// temp保存父节点值，用于最后的赋值</span></span><br><span class="line">		<span class="keyword">int</span> temp = array[parentIndex];</span><br><span class="line">		<span class="keyword">int</span> childIndex = <span class="number">2</span> * parentIndex + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (childIndex &lt; length) &#123;</span><br><span class="line">			<span class="comment">// 如果有右孩子，且右孩子大于左孩子的值，则定位到右孩子</span></span><br><span class="line">			<span class="keyword">if</span> (childIndex + <span class="number">1</span> &lt; length &amp;&amp; array[childIndex + <span class="number">1</span>] &gt; array[childIndex]) &#123;</span><br><span class="line">				childIndex++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 如果父节点小于任何一个孩子的值，直接跳出</span></span><br><span class="line">			<span class="keyword">if</span> (temp &gt;= array[childIndex])</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="comment">// 无需真正交换，单向赋值即可</span></span><br><span class="line">			array[parentIndex] = array[childIndex];</span><br><span class="line">			parentIndex = childIndex;</span><br><span class="line">			childIndex = <span class="number">2</span> * childIndex + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		array[parentIndex] = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 堆排序</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> array</span></span><br><span class="line"><span class="comment">	 *            待调整的堆</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 1.把无序数组构建成二叉堆。</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = (array.length - <span class="number">2</span>) / <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">			downAdjust(array, i, array.length);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(Arrays.toString(array)); <span class="comment">// [10, 9, 8, 6, 5, 7, 2, 3, 1, 0]</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 2.循环删除堆顶元素，移到集合尾部，调节堆产生新的堆顶。</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = array.length - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">			<span class="comment">// 最后一个元素和第一元素进行交换</span></span><br><span class="line">			<span class="keyword">int</span> temp = array[i];</span><br><span class="line">			array[i] = array[<span class="number">0</span>];</span><br><span class="line">			array[<span class="number">0</span>] = temp;</span><br><span class="line">			<span class="comment">// 下沉调整最大堆</span></span><br><span class="line">			downAdjust(array, <span class="number">0</span>, i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">0</span> &#125;; <span class="comment">// [0, 1, 2, 3, 5, 6, 7, 8, 9, 10]</span></span><br><span class="line">		heapSort(arr);</span><br><span class="line">		System.out.println(Arrays.toString(arr));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>二叉堆的节点下沉调整（downAdjust 方法）是堆排序算法的基础，这个调节操作本身的时间复杂度是多少呢？</p>
 <p>假设二叉堆总共有n个元素，那么下沉调整的最坏时间复杂度就等同于二叉堆的高度，也就是<strong>O（logn）</strong>。</p>
 <p>我们再来回顾一下堆排序算法的步骤：</p>
@@ -529,10 +597,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -540,6 +608,10 @@
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="lsb" />
             
               <p class="site-author-name" itemprop="name">lsb</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -553,7 +625,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -562,10 +634,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
-                
+                  <span class="site-state-item-name">分类</span>
+                </a>
               </div>
             
 
@@ -573,10 +645,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">tags</span>
-                
+                  <span class="site-state-item-name">标签</span>
+                </a>
               </div>
             
 
@@ -584,13 +656,35 @@
 
           
             <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
+              <a href="https://github.com/" rel="alternate">
                 <i class="fa fa-rss"></i>
                 RSS
               </a>
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imnice" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:imdangerous@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -634,7 +728,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -644,15 +738,9 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
@@ -699,6 +787,8 @@
   
 
 
+  
+
 
 
 
@@ -739,6 +829,11 @@
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
 
   
 
@@ -751,6 +846,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
@@ -800,6 +902,323 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -814,6 +1233,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-cn">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -53,16 +53,12 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
 
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
 
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -74,7 +70,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="LSB.pro" type="application/atom+xml" />
+  <link rel="alternate" href="https://github.com/" title="LSB.pro" type="application/atom+xml" />
 
 
 
@@ -88,7 +84,7 @@
 <meta property="og:url" content="https://imnice.github.io/2018/09/10/排序算法大盘点/index.html">
 <meta property="og:site_name" content="LSB.pro">
 <meta property="og:description" content="排序算法大盘点#文章摘要，会出现在meta的description里面">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/NxHAz3ENVHfjVL0CDc6Gr6aOtD5Jn5K6dlZKOCvQIZ0!/r/dDEBAAAAAAAA">
 <meta property="og:image" content="http://m.qpic.cn/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/YV9tnBeeATgqzB5xz36IXrPQhJQq4jtJ*LIxXPqCMPU!/b/dFIBAAAAAAAA&bo=KwP4ACsD.AACSW0!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/zL5OCxqeFlrhi4Yvqt7hV7IlHGYOBaDEfdlwHByFmIo!/b/dDUBAAAAAAAA&bo=KwP5ASsD.QECOR0!&rf=viewer_4">
@@ -113,15 +109,15 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -134,8 +130,6 @@
 </script>
 
 
-
-  <link rel="canonical" href="https://imnice.github.io/2018/09/10/排序算法大盘点/"/>
 
 
 
@@ -153,7 +147,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -201,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -211,15 +205,89 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
           </a>
         </li>
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -275,9 +343,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-10T18:00:50+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-10T18:00:50+08:00">
                 2018-09-10
               </time>
             
@@ -296,7 +364,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -347,21 +415,21 @@
 <h3 id="选择排序（Selection-Sort）"><a href="#选择排序（Selection-Sort）" class="headerlink" title="选择排序（Selection Sort）"></a>选择排序（Selection Sort）</h3><p>选择出数组中的最小元素，将它与数组的第一个元素交换位置。再从剩下的元素中选择出最小的元素，将它与数组的第二个元素交换位置。不断进行这样的操作，直到将整个数组排序。 </p>
 <p><img src="http://m.qpic.cn/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/YV9tnBeeATgqzB5xz36IXrPQhJQq4jtJ*LIxXPqCMPU!/b/dFIBAAAAAAAA&amp;bo=KwP4ACsD.AACSW0!&amp;rf=viewer_4" alt="选择排序"></p>
 <p><strong>代码实现</strong></p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="hljs-comment">// 寻找[i, n)区间里的最小值的索引</span></span><br><span class="line">        <span class="hljs-keyword">int</span> minIndex = i;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span>(arr[minIndex] &gt; arr[j])&#123;</span><br><span class="line">                minIndex = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap( arr , i , minIndex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> t = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 寻找[i, n)区间里的最小值的索引</span></span><br><span class="line">        <span class="keyword">int</span> minIndex = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[minIndex] &gt; arr[j])&#123;</span><br><span class="line">                minIndex = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap( arr , i , minIndex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>算法分析</strong></p>
 <p>表现最稳定的排序算法之一，因为无论什么数据进去都是O(n2)的时间复杂度，所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间了吧。理论上讲，选择排序可能也是平时排序一般人想到的最多的排序方法了吧。</p>
 <h3 id="插入排序（Insertion-Sort）"><a href="#插入排序（Insertion-Sort）" class="headerlink" title="插入排序（Insertion Sort）"></a>插入排序（Insertion Sort）</h3><p>插入排序从左到右进行，每次都将当前元素插入到左侧已经排序的数组中，使得插入之后左部数组依然有序。</p>
 <p>第 j 元素是通过不断向左比较并交换来实现插入过程：当第 j 元素小于第 j - 1 元素，就将它们的位置交换，然后令 j 指针向左移动一个位置，不断进行以上操作。</p>
 <p><img src="http://m.qpic.cn/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/zL5OCxqeFlrhi4Yvqt7hV7IlHGYOBaDEfdlwHByFmIo!/b/dDUBAAAAAAAA&amp;bo=KwP5ASsD.QECOR0!&amp;rf=viewer_4" alt="插入排序"></p>
 <p><strong>代码实现</strong></p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length - <span class="hljs-number">1</span>; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &gt; <span class="hljs-number">0</span>; j--) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (arr[j] &lt; arr[j - <span class="hljs-number">1</span>])</span><br><span class="line">                swap(arr, j, j - <span class="hljs-number">1</span>); <span class="hljs-comment">// 大量的交换会消耗时间</span></span><br><span class="line">            <span class="hljs-keyword">else</span></span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 改进版插入排序（减少了数组元素的操作次数）</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">better_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">int</span> e = arr[i];</span><br><span class="line">        <span class="hljs-keyword">int</span> j = i;</span><br><span class="line">        <span class="hljs-keyword">for</span> (; j &gt; <span class="hljs-number">0</span>; j--) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (e &lt; arr[j - <span class="hljs-number">1</span>])</span><br><span class="line">                arr[j] = arr[j - <span class="hljs-number">1</span>];</span><br><span class="line">            <span class="hljs-keyword">else</span></span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j] = e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> t = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &gt; <span class="number">0</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &lt; arr[j - <span class="number">1</span>])</span><br><span class="line">                swap(arr, j, j - <span class="number">1</span>); <span class="comment">// 大量的交换会消耗时间</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改进版插入排序（减少了数组元素的操作次数）</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">better_sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> e = arr[i];</span><br><span class="line">        <span class="keyword">int</span> j = i;</span><br><span class="line">        <span class="keyword">for</span> (; j &gt; <span class="number">0</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (e &lt; arr[j - <span class="number">1</span>])</span><br><span class="line">                arr[j] = arr[j - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j] = e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>算法分析</strong></p>
 <p>插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间。</p>
 <h3 id="冒泡排序（Bubble-Sort）"><a href="#冒泡排序（Bubble-Sort）" class="headerlink" title="冒泡排序（Bubble Sort）"></a>冒泡排序（Bubble Sort）</h3><p>通过从左到右不断交换相邻逆序的相邻元素，在一轮的交换之后，可以让未排序的元素上浮到右侧。</p>
 <p>在一轮循环中，如果没有发生交换，就说明数组已经是有序的，此时可以直接退出。</p>
 <p><img src="http://m.qpic.cn/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/aOGOUsorlHlBsmkCLfRocLV4iAjHHSdSTyuDwMWfRVE!/b/dDUBAAAAAAAA&amp;bo=OgMBAToDAQECOR0!&amp;rf=viewer_4" alt="冒泡排序"></p>
 <p><strong>代码实现</strong></p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = arr.length - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) &#123; <span class="hljs-comment">// 从最后一位开始确定</span></span><br><span class="line">        <span class="hljs-keyword">boolean</span> swapped = <span class="hljs-keyword">false</span>;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span>(arr[j] &gt; arr[j+<span class="hljs-number">1</span>])&#123;</span><br><span class="line">                swapped = <span class="hljs-keyword">true</span>;</span><br><span class="line">                swap(arr,j,j+<span class="hljs-number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span>(!swapped)</span><br><span class="line">            <span class="hljs-keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> t = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = arr.length - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123; <span class="comment">// 从最后一位开始确定</span></span><br><span class="line">        <span class="keyword">boolean</span> swapped = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                swapped = <span class="keyword">true</span>;</span><br><span class="line">                swap(arr,j,j+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!swapped)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="希尔排序（Shell-Sort）"><a href="#希尔排序（Shell-Sort）" class="headerlink" title="希尔排序（Shell Sort）"></a>希尔排序（Shell Sort）</h3><p>1959年Shell发明，第一个突破O(n2)的排序算法，是简单插入排序的改进版。它与插入排序的不同之处在于，它会优先比较距离较远的元素。希尔排序又叫<strong>缩小增量排序</strong>。</p>
 <p><strong>算法描述</strong></p>
 <p>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，具体算法描述：</p>
@@ -372,7 +440,7 @@
 </ul>
 <p><img src="http://m.qpic.cn/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/WbpvOOUMKcbzCu*7ExpJMjzqcof2U69m1jwix.iIJDs!/b/dEcBAAAAAAAA&amp;bo=mQIiAZkCIgECaU0!&amp;rf=viewer_4" alt="希尔排序"></p>
 <p><strong>代码实现</strong></p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 希尔排序</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n = arr.length;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> h = n / <span class="hljs-number">2</span>; h &gt; <span class="hljs-number">0</span>; h = h / <span class="hljs-number">2</span>) &#123;</span><br><span class="line">        <span class="hljs-comment">// 内部是一个插入排序</span></span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i = i + h) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">int</span> e = arr[i];</span><br><span class="line">            <span class="hljs-keyword">int</span> j = i;</span><br><span class="line">            <span class="hljs-keyword">for</span> (; j &gt; <span class="hljs-number">0</span>; j = j - h) &#123;</span><br><span class="line">                <span class="hljs-keyword">if</span> (e &lt; arr[j - h])</span><br><span class="line">                    arr[j] = arr[j - h];</span><br><span class="line">                <span class="hljs-keyword">else</span></span><br><span class="line">                    <span class="hljs-keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            arr[j] = e;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 希尔排序2</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort2</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n = arr.length;</span><br><span class="line">    <span class="hljs-comment">// 计算 increment sequence: 1, 4, 13, 40, 121, 364, 1093...</span></span><br><span class="line">    <span class="hljs-keyword">int</span> h = <span class="hljs-number">1</span>;</span><br><span class="line">    <span class="hljs-keyword">while</span> (h &lt; n / <span class="hljs-number">3</span>) h = <span class="hljs-number">3</span> * h + <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println(h);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">while</span> (h &gt;= <span class="hljs-number">1</span>) &#123;</span><br><span class="line">        <span class="hljs-comment">// h-sort the array</span></span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = h; i &lt; n; i++) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="hljs-comment">// 对 arr[i], arr[i-h], arr[i-2*h], arr[i-3*h]... 使用插入排序</span></span><br><span class="line">            <span class="hljs-keyword">int</span> e = arr[i];</span><br><span class="line">            <span class="hljs-keyword">int</span> j = i;</span><br><span class="line">            <span class="hljs-keyword">for</span> (; j &gt;= h &amp;&amp; e &lt; arr[j - h]; j -= h)</span><br><span class="line">                arr[j] = arr[j - h];</span><br><span class="line">            arr[j] = e;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        h /= <span class="hljs-number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 希尔排序</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = arr.length;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> h = n / <span class="number">2</span>; h &gt; <span class="number">0</span>; h = h / <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="comment">// 内部是一个插入排序</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i = i + h) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> e = arr[i];</span><br><span class="line">            <span class="keyword">int</span> j = i;</span><br><span class="line">            <span class="keyword">for</span> (; j &gt; <span class="number">0</span>; j = j - h) &#123;</span><br><span class="line">                <span class="keyword">if</span> (e &lt; arr[j - h])</span><br><span class="line">                    arr[j] = arr[j - h];</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            arr[j] = e;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 希尔排序2</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort2</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = arr.length;</span><br><span class="line">    <span class="comment">// 计算 increment sequence: 1, 4, 13, 40, 121, 364, 1093...</span></span><br><span class="line">    <span class="keyword">int</span> h = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (h &lt; n / <span class="number">3</span>) h = <span class="number">3</span> * h + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println(h);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (h &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="comment">// h-sort the array</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = h; i &lt; n; i++) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 对 arr[i], arr[i-h], arr[i-2*h], arr[i-3*h]... 使用插入排序</span></span><br><span class="line">            <span class="keyword">int</span> e = arr[i];</span><br><span class="line">            <span class="keyword">int</span> j = i;</span><br><span class="line">            <span class="keyword">for</span> (; j &gt;= h &amp;&amp; e &lt; arr[j - h]; j -= h)</span><br><span class="line">                arr[j] = arr[j - h];</span><br><span class="line">            arr[j] = e;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        h /= <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>算法分析</strong></p>
 <p>对于大规模的数组，插入排序很慢，因为它只能交换相邻的元素，每次只能将逆序数量减少 1。</p>
 <p>希尔排序的出现就是为了改进插入排序的这种局限性，它通过交换不相邻的元素，每次可以将逆序数量减少大于 1。</p>
@@ -384,39 +452,39 @@
 <p>1.归并方法</p>
 <p>归并方法将数组中两个已经排序的部分归并成一个。</p>
 </blockquote>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    __MergeSort(arr, <span class="hljs-number">0</span>, arr.length - <span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">__MergeSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (l &gt;= r)</span><br><span class="line">        <span class="hljs-keyword">return</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> mid = (l + r) / <span class="hljs-number">2</span>;</span><br><span class="line">    __MergeSort(arr, l, mid);</span><br><span class="line">    __MergeSort(arr, mid + <span class="hljs-number">1</span>, r);</span><br><span class="line">    merge(arr, l, mid, r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 将arr[l...mid]和arr[mid+1...r]两部分进行归并</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> mid, <span class="hljs-keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span>[] aux = Arrays.copyOfRange(arr, l, r + <span class="hljs-number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 初始化，i指向左半部分的起始索引位置l；j指向右半部分起始索引位置mid+1</span></span><br><span class="line">    <span class="hljs-keyword">int</span> i = l, j = mid + <span class="hljs-number">1</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = l; k &lt;= r; k++) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (i &gt; mid) &#123;  <span class="hljs-comment">// 如果左半部分元素已经全部处理完毕</span></span><br><span class="line">            arr[k] = aux[j - l];</span><br><span class="line">            j++;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (j &gt; r) &#123;   <span class="hljs-comment">// 如果右半部分元素已经全部处理完毕</span></span><br><span class="line">            arr[k] = aux[i - l];</span><br><span class="line">            i++;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (aux[i - l] &lt; aux[j - l]) &#123;  <span class="hljs-comment">// 左半部分所指元素 &lt; 右半部分所指元素</span></span><br><span class="line">            arr[k] = aux[i - l];</span><br><span class="line">            i++;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;  <span class="hljs-comment">// 左半部分所指元素 &gt;= 右半部分所指元素</span></span><br><span class="line">            arr[k] = aux[j - l];</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    __MergeSort(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">__MergeSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    __MergeSort(arr, l, mid);</span><br><span class="line">    __MergeSort(arr, mid + <span class="number">1</span>, r);</span><br><span class="line">    merge(arr, l, mid, r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将arr[l...mid]和arr[mid+1...r]两部分进行归并</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> mid, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] aux = Arrays.copyOfRange(arr, l, r + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化，i指向左半部分的起始索引位置l；j指向右半部分起始索引位置mid+1</span></span><br><span class="line">    <span class="keyword">int</span> i = l, j = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = l; k &lt;= r; k++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i &gt; mid) &#123;  <span class="comment">// 如果左半部分元素已经全部处理完毕</span></span><br><span class="line">            arr[k] = aux[j - l];</span><br><span class="line">            j++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j &gt; r) &#123;   <span class="comment">// 如果右半部分元素已经全部处理完毕</span></span><br><span class="line">            arr[k] = aux[i - l];</span><br><span class="line">            i++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (aux[i - l] &lt; aux[j - l]) &#123;  <span class="comment">// 左半部分所指元素 &lt; 右半部分所指元素</span></span><br><span class="line">            arr[k] = aux[i - l];</span><br><span class="line">            i++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;  <span class="comment">// 左半部分所指元素 &gt;= 右半部分所指元素</span></span><br><span class="line">            arr[k] = aux[j - l];</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>2.自底向上归并排序</p>
 </blockquote>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> N = arr.length;</span><br><span class="line">    <span class="hljs-keyword">int</span>[] aux = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[N];</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> sz = <span class="hljs-number">1</span>; sz &lt; N; sz += sz)</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i + sz &lt; N; i += sz + sz)</span><br><span class="line">            merge(arr, i, i + sz - <span class="hljs-number">1</span>, Math.min(i + sz + sz - <span class="hljs-number">1</span>, N - <span class="hljs-number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> N = arr.length;</span><br><span class="line">    <span class="keyword">int</span>[] aux = <span class="keyword">new</span> <span class="keyword">int</span>[N];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> sz = <span class="number">1</span>; sz &lt; N; sz += sz)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i + sz &lt; N; i += sz + sz)</span><br><span class="line">            merge(arr, i, i + sz - <span class="number">1</span>, Math.min(i + sz + sz - <span class="number">1</span>, N - <span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="快速排序（Quick-Sort）"><a href="#快速排序（Quick-Sort）" class="headerlink" title="快速排序（Quick Sort）"></a>快速排序（Quick Sort）</h3><p>快速排序可以说是20世纪最伟大的算法之一了。相信都有所耳闻，它的速度也正如它的名字那样，是一个非常快的算法了。当然它也后期经过了不断的改进和优化，才被公认为是一个值得信任的非常优秀的算法。</p>
 <p><img src="http://m.qpic.cn/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/pd5IzBeVhNW4VOXFht36KEbPCnPd.qhaH7i2tirsEZE!/b/dFUAAAAAAAAA&amp;bo=KwP8ACsD*AACOR0!&amp;rf=viewer_4" alt="快速排序"></p>
 <p><strong>代码实现</strong></p>
-<h4 id="1-普通快速排序"><a href="#1-普通快速排序" class="headerlink" title="1. 普通快速排序"></a>1. 普通快速排序</h4><figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 递归使用快速排序,对arr[l...r]的范围进行排序</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">QuickSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr,<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span>(l&gt;=r)</span><br><span class="line">        <span class="hljs-keyword">return</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> p = partition(arr,l,r);</span><br><span class="line">    QuickSort(arr,l,p-<span class="hljs-number">1</span>);</span><br><span class="line">    QuickSort(arr,p+<span class="hljs-number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 将数组通过p分割成两部分</span></span><br><span class="line"><span class="hljs-comment">// 对arr[l...r]部分进行partition操作</span></span><br><span class="line"><span class="hljs-comment">// 返回p, 使得arr[l...p-1] &lt; arr[p] ; arr[p+1...r] &gt; arr[p]</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">partition</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    swap(arr, l, (<span class="hljs-keyword">int</span>) (Math.random() % (r - l + <span class="hljs-number">1</span>)) + l);  <span class="hljs-comment">// 加入这一行变成随机快速排序</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> v = arr[l];</span><br><span class="line">    <span class="hljs-keyword">int</span> j = l;</span><br><span class="line">    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = j +<span class="hljs-number">1</span>;i&lt;=r;i++)&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(arr[i] &lt; v)&#123;</span><br><span class="line">            j++;</span><br><span class="line">            swap(arr,i,j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    swap(arr,l,j);</span><br><span class="line">    <span class="hljs-keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr,<span class="hljs-keyword">int</span> i,<span class="hljs-keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> temp = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="1-普通快速排序"><a href="#1-普通快速排序" class="headerlink" title="1. 普通快速排序"></a>1. 普通快速排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归使用快速排序,对arr[l...r]的范围进行排序</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;=r)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> p = partition(arr,l,r);</span><br><span class="line">    QuickSort(arr,l,p-<span class="number">1</span>);</span><br><span class="line">    QuickSort(arr,p+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将数组通过p分割成两部分</span></span><br><span class="line"><span class="comment">// 对arr[l...r]部分进行partition操作</span></span><br><span class="line"><span class="comment">// 返回p, 使得arr[l...p-1] &lt; arr[p] ; arr[p+1...r] &gt; arr[p]</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    swap(arr, l, (<span class="keyword">int</span>) (Math.random() % (r - l + <span class="number">1</span>)) + l);  <span class="comment">// 加入这一行变成随机快速排序</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> v = arr[l];</span><br><span class="line">    <span class="keyword">int</span> j = l;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = j +<span class="number">1</span>;i&lt;=r;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i] &lt; v)&#123;</span><br><span class="line">            j++;</span><br><span class="line">            swap(arr,i,j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    swap(arr,l,j);</span><br><span class="line">    <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>快速排序是原地排序，不需要辅助数组，但是递归调用需要辅助栈。</p>
 <p>快速排序最好的情况下是每次都正好能将数组对半分，这样递归调用次数才是最少的。这种情况下比较次数为 CN=2CN/2+N，复杂度为 O(NlogN)。</p>
 <p>最坏的情况下，第一次从最小的元素切分，第二次从第二小的元素切分，如此这般。因此最坏的情况下需要比较 N2/2。为了防止数组最开始就是有序的，在进行快速排序时需要随机打乱数组。</p>
 <h4 id="2-双路快速排序"><a href="#2-双路快速排序" class="headerlink" title="2. 双路快速排序"></a>2. 双路快速排序</h4><p>若果数组中含有大量重复的元素，则partition很可能把数组划分成两个及其不平衡的两部分，时间复杂度退化成O(n²)。这时候应该把小于v和大于v放在数组两端。</p>
 <p><img src="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/qOx3ZGM.Q7rctahPmjDSgEtPW9ElmIUxwjcdSmHQpV4!/r/dFIBAAAAAAAA" alt="双路快排"></p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 双路快速排序的partition</span></span><br><span class="line"><span class="hljs-comment">// 返回p, 使得arr[l...p-1] &lt; arr[p] ; arr[p+1...r] &gt; arr[p]</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">partition</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot</span></span><br><span class="line">    <span class="hljs-comment">// swap(arr, l, (int) (Math.random() % (r - l + 1)) + l);</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> v = arr[l];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// arr[l+1...i) &lt;= v; arr(j...r] &gt;= v</span></span><br><span class="line">    <span class="hljs-keyword">int</span> i = l + <span class="hljs-number">1</span>, j = r;</span><br><span class="line">    <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) &#123;</span><br><span class="line">        <span class="hljs-comment">// 注意这里的边界, arr[i].compareTo(v) &lt; 0, 不能是arr[i].compareTo(v) &lt;= 0</span></span><br><span class="line">        <span class="hljs-comment">// 思考一下为什么?</span></span><br><span class="line">        <span class="hljs-keyword">while</span> (i &lt;= r &amp;&amp; arr[i] &lt; v)</span><br><span class="line">            i++;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 注意这里的边界, arr[j].compareTo(v) &gt; 0, 不能是arr[j].compareTo(v) &gt;= 0</span></span><br><span class="line">        <span class="hljs-comment">// 思考一下为什么?</span></span><br><span class="line">        <span class="hljs-keyword">while</span> (j &gt;= l + <span class="hljs-number">1</span> &amp;&amp; arr[j] &gt; v)</span><br><span class="line">            j--;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 对于上面的两个边界的设定, 有的同学在课程的问答区有很好的回答:)</span></span><br><span class="line">        <span class="hljs-comment">// 大家可以参考: http://coding.imooc.com/learn/questiondetail/4920.html</span></span><br><span class="line">        <span class="hljs-keyword">if</span> (i &gt; j)</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        </span><br><span class="line">        swap(arr, i, j);</span><br><span class="line">        i++;</span><br><span class="line">        j--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    swap(arr, l, j);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 递归使用快速排序,对arr[l...r]的范围进行排序</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">QuickSort2Ways</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 对于小规模数组, 使用插入排序</span></span><br><span class="line">    <span class="hljs-keyword">if</span> (l &gt;= r) <span class="hljs-keyword">return</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> p = partition(arr, l, r);</span><br><span class="line">    QuickSort2Ways(arr, l, p - <span class="hljs-number">1</span>);</span><br><span class="line">    QuickSort2Ways(arr, p + <span class="hljs-number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 双路快速排序的partition</span></span><br><span class="line"><span class="comment">// 返回p, 使得arr[l...p-1] &lt; arr[p] ; arr[p+1...r] &gt; arr[p]</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot</span></span><br><span class="line">    <span class="comment">// swap(arr, l, (int) (Math.random() % (r - l + 1)) + l);</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> v = arr[l];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// arr[l+1...i) &lt;= v; arr(j...r] &gt;= v</span></span><br><span class="line">    <span class="keyword">int</span> i = l + <span class="number">1</span>, j = r;</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">        <span class="comment">// 注意这里的边界, arr[i].compareTo(v) &lt; 0, 不能是arr[i].compareTo(v) &lt;= 0</span></span><br><span class="line">        <span class="comment">// 思考一下为什么?</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt;= r &amp;&amp; arr[i] &lt; v)</span><br><span class="line">            i++;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注意这里的边界, arr[j].compareTo(v) &gt; 0, 不能是arr[j].compareTo(v) &gt;= 0</span></span><br><span class="line">        <span class="comment">// 思考一下为什么?</span></span><br><span class="line">        <span class="keyword">while</span> (j &gt;= l + <span class="number">1</span> &amp;&amp; arr[j] &gt; v)</span><br><span class="line">            j--;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 对于上面的两个边界的设定, 有的同学在课程的问答区有很好的回答:)</span></span><br><span class="line">        <span class="comment">// 大家可以参考: http://coding.imooc.com/learn/questiondetail/4920.html</span></span><br><span class="line">        <span class="keyword">if</span> (i &gt; j)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        </span><br><span class="line">        swap(arr, i, j);</span><br><span class="line">        i++;</span><br><span class="line">        j--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    swap(arr, l, j);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归使用快速排序,对arr[l...r]的范围进行排序</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">QuickSort2Ways</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 对于小规模数组, 使用插入排序</span></span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> p = partition(arr, l, r);</span><br><span class="line">    QuickSort2Ways(arr, l, p - <span class="number">1</span>);</span><br><span class="line">    QuickSort2Ways(arr, p + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="3-三路快速排序"><a href="#3-三路快速排序" class="headerlink" title="3. 三路快速排序"></a>3. 三路快速排序</h4><p>数组分成三个部分，大于v 等于v 小于v</p>
 <p>在具有大量重复键值对的情况下使用三路快排</p>
 <p><img src="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/yVHsV635.YSKc8pNUwGU*kbQTlj.MyOwIl5ihuAjKL4!/r/dFIBAAAAAAAA" alt="三路快排"></p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 递归使用快速排序,对arr[l...r]的范围进行排序</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">QuickSort3Ways</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot</span></span><br><span class="line">    swap( arr, l, (<span class="hljs-keyword">int</span>)(Math.random()*(r-l+<span class="hljs-number">1</span>)) + l );</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> v = arr[l];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> lt = l;     <span class="hljs-comment">// arr[l+1...lt] &lt; v</span></span><br><span class="line">    <span class="hljs-keyword">int</span> gt = r + <span class="hljs-number">1</span>; <span class="hljs-comment">// arr[gt...r] &gt; v</span></span><br><span class="line">    <span class="hljs-keyword">int</span> i = l+<span class="hljs-number">1</span>;    <span class="hljs-comment">// arr[lt+1...i) == v</span></span><br><span class="line">    <span class="hljs-keyword">while</span>( i &lt; gt )&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>( arr[i] &lt; v)&#123;</span><br><span class="line">            swap( arr, i, lt+<span class="hljs-number">1</span>);</span><br><span class="line">            i ++;</span><br><span class="line">            lt ++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>( arr[i] &gt; v )&#123;</span><br><span class="line">            swap( arr, i, gt-<span class="hljs-number">1</span>);</span><br><span class="line">            gt --;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">else</span>&#123; <span class="hljs-comment">// arr[i] == v</span></span><br><span class="line">            i ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    swap( arr, l, lt );</span><br><span class="line"></span><br><span class="line">    QuickSort3Ways(arr, l, lt-<span class="hljs-number">1</span>);</span><br><span class="line">    QuickSort3Ways(arr, gt, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归使用快速排序,对arr[l...r]的范围进行排序</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">QuickSort3Ways</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot</span></span><br><span class="line">    swap( arr, l, (<span class="keyword">int</span>)(Math.random()*(r-l+<span class="number">1</span>)) + l );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> v = arr[l];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> lt = l;     <span class="comment">// arr[l+1...lt] &lt; v</span></span><br><span class="line">    <span class="keyword">int</span> gt = r + <span class="number">1</span>; <span class="comment">// arr[gt...r] &gt; v</span></span><br><span class="line">    <span class="keyword">int</span> i = l+<span class="number">1</span>;    <span class="comment">// arr[lt+1...i) == v</span></span><br><span class="line">    <span class="keyword">while</span>( i &lt; gt )&#123;</span><br><span class="line">        <span class="keyword">if</span>( arr[i] &lt; v)&#123;</span><br><span class="line">            swap( arr, i, lt+<span class="number">1</span>);</span><br><span class="line">            i ++;</span><br><span class="line">            lt ++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>( arr[i] &gt; v )&#123;</span><br><span class="line">            swap( arr, i, gt-<span class="number">1</span>);</span><br><span class="line">            gt --;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123; <span class="comment">// arr[i] == v</span></span><br><span class="line">            i ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    swap( arr, l, lt );</span><br><span class="line"></span><br><span class="line">    QuickSort3Ways(arr, l, lt-<span class="number">1</span>);</span><br><span class="line">    QuickSort3Ways(arr, gt, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="堆排序（Heap-Sort）"><a href="#堆排序（Heap-Sort）" class="headerlink" title="堆排序（Heap Sort）"></a>堆排序（Heap Sort）</h3><h4 id="1-堆"><a href="#1-堆" class="headerlink" title="1. 堆"></a>1. 堆</h4><p>堆的某个节点的值总是大于等于子节点的值，并且堆是一颗完全二叉树。</p>
 <p>堆可以用数组来表示，因为堆是完全二叉树，而完全二叉树很容易就存储在数组中。位置 k 的节点的父节点位置为 k/2，而它的两个子节点的位置分别为 2k 和 2k+1。这里不使用数组索引为 0 的位置，是为了更清晰地描述节点的位置关系。</p>
 <p><img src="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/SJnsOdMESxzcanQb5Zff9m1PWcvETjWcZqUhzOG8LrY!/r/dDQBAAAAAAAA" alt="堆"></p>
 <h4 id="2-上浮和下沉"><a href="#2-上浮和下沉" class="headerlink" title="2. 上浮和下沉"></a>2. 上浮和下沉</h4><p>在堆中，当一个节点比父节点大，那么需要交换这个两个节点。交换后还可能比它新的父节点大，因此需要不断地进行比较和交换操作，把这种操作称为<strong>上浮（ShiftUp）</strong>。</p>
 <p><img src="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/P1R6qKYyIG2cvmg4iwq311KwKxl3kHHtkQASAay.YyQ!/r/dFIBAAAAAAAA" alt="上浮"> </p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shiftUp</span><span class="hljs-params">(<span class="hljs-keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">while</span>( k &gt; <span class="hljs-number">1</span> &amp;&amp; data[k/<span class="hljs-number">2</span>] &lt; data[k]))&#123;</span><br><span class="line">        swap(k, k/<span class="hljs-number">2</span>);</span><br><span class="line">        k /= <span class="hljs-number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">shiftUp</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>( k &gt; <span class="number">1</span> &amp;&amp; data[k/<span class="number">2</span>] &lt; data[k]))&#123;</span><br><span class="line">        swap(k, k/<span class="number">2</span>);</span><br><span class="line">        k /= <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>类似地，当一个节点比子节点来得小，也需要不断地向下进行比较和交换操作，把这种操作称为<strong>下沉（Shift Down）</strong>。一个节点如果有两个子节点，应当与两个子节点中最大那么节点进行交换。</p>
 <p><img src="http://r.photo.store.qq.com/psb?/932c31e8-a24c-44e8-b0eb-07a959965080/Q2F4.olX0m5xGkcelT5Zl7kkA62Qv9sWv.oIAEKKf7E!/r/dDYBAAAAAAAA" alt="下沉"> </p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shiftDown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">while</span>( <span class="hljs-number">2</span>*k &lt;= count )&#123; <span class="hljs-comment">// 当前结点有左孩子</span></span><br><span class="line">        <span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>*k; <span class="hljs-comment">// 在此轮循环中,data[k]和data[j]交换位置</span></span><br><span class="line">        <span class="hljs-keyword">if</span>( j+<span class="hljs-number">1</span> &lt;= count &amp;&amp; data[j+<span class="hljs-number">1</span>] &gt; data[j] )</span><br><span class="line">            j ++;</span><br><span class="line">        <span class="hljs-comment">// data[j] 是 data[2*k]和data[2*k+1]中的最大值</span></span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">if</span>( data[k] &gt;= data[j] ) </span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        swap(k, j);</span><br><span class="line">        k = j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">shiftDown</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>( <span class="number">2</span>*k &lt;= count )&#123; <span class="comment">// 当前结点有左孩子</span></span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">2</span>*k; <span class="comment">// 在此轮循环中,data[k]和data[j]交换位置</span></span><br><span class="line">        <span class="keyword">if</span>( j+<span class="number">1</span> &lt;= count &amp;&amp; data[j+<span class="number">1</span>] &gt; data[j] )</span><br><span class="line">            j ++;</span><br><span class="line">        <span class="comment">// data[j] 是 data[2*k]和data[2*k+1]中的最大值</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>( data[k] &gt;= data[j] ) </span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        swap(k, j);</span><br><span class="line">        k = j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="3-插入元素"><a href="#3-插入元素" class="headerlink" title="3.插入元素"></a>3.插入元素</h4><p>将新元素放到数组末尾，然后上浮到合适的位置。  </p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 向最大堆中插入一个新的元素 item</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(Item item)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">assert</span> count + <span class="hljs-number">1</span> &lt;= capacity;</span><br><span class="line">    data[count+<span class="hljs-number">1</span>] = item;</span><br><span class="line">    count ++;</span><br><span class="line">    shiftUp(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="4-删除最大元素"><a href="#4-删除最大元素" class="headerlink" title="4. 删除最大元素"></a>4. 删除最大元素</h4><figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 从最大堆中取出堆顶元素, 即堆中所存储的最大数据</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> Item <span class="hljs-title">extractMax</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">assert</span> count &gt; <span class="hljs-number">0</span>;</span><br><span class="line">    Item ret = data[<span class="hljs-number">1</span>];</span><br><span class="line">    </span><br><span class="line">    swap( <span class="hljs-number">1</span> , count );</span><br><span class="line">    count --;</span><br><span class="line">    shiftDown(<span class="hljs-number">1</span>);</span><br><span class="line">    <span class="hljs-keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 向最大堆中插入一个新的元素 item</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(Item item)</span></span>&#123;</span><br><span class="line">    <span class="keyword">assert</span> count + <span class="number">1</span> &lt;= capacity;</span><br><span class="line">    data[count+<span class="number">1</span>] = item;</span><br><span class="line">    count ++;</span><br><span class="line">    shiftUp(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-删除最大元素"><a href="#4-删除最大元素" class="headerlink" title="4. 删除最大元素"></a>4. 删除最大元素</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从最大堆中取出堆顶元素, 即堆中所存储的最大数据</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Item <span class="title">extractMax</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">assert</span> count &gt; <span class="number">0</span>;</span><br><span class="line">    Item ret = data[<span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">    swap( <span class="number">1</span> , count );</span><br><span class="line">    count --;</span><br><span class="line">    shiftDown(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="5-堆排序"><a href="#5-堆排序" class="headerlink" title="5. 堆排序"></a>5. 堆排序</h4><p>由于堆可以很容易得到最大的元素并删除它，不断地进行这种操作可以得到一个递减序列。如果把最大元素和当前堆中数组的最后一个元素交换位置，并且不删除它，那么就可以得到一个从尾到头的递减序列，从正向来看就是一个递增序列。因此很容易使用堆来进行排序。并且堆排序是原地排序，不占用额外空间。</p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 不使用一个额外的最大堆, 直接在原数组上进行原地的堆排序</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeapSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 对整个arr数组使用HeapSort1排序</span></span><br><span class="line">    <span class="hljs-comment">// HeapSort1, 将所有的元素依次添加到堆中, 在将所有元素从堆中依次取出来, 即完成了排序</span></span><br><span class="line">    <span class="hljs-comment">// 无论是创建堆的过程, 还是从堆中依次取出元素的过程, 时间复杂度均为O(nlogn)</span></span><br><span class="line">    <span class="hljs-comment">// 整个堆排序的整体时间复杂度为O(nlogn)</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort1</span><span class="hljs-params">(Comparable[] arr)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">int</span> n = arr.length;</span><br><span class="line">        MaxHeap&lt;Comparable&gt; maxHeap = <span class="hljs-keyword">new</span> MaxHeap&lt;Comparable&gt;(n);</span><br><span class="line">        <span class="hljs-keyword">for</span>( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; n ; i ++ )</span><br><span class="line">            maxHeap.insert(arr[i]);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">for</span>( <span class="hljs-keyword">int</span> i = n-<span class="hljs-number">1</span> ; i &gt;= <span class="hljs-number">0</span> ; i -- )</span><br><span class="line">            arr[i] = maxHeap.extractMax();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 只通过shiftDown操作进行排序</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort2</span><span class="hljs-params">(Comparable[] arr)</span></span>&#123;</span><br><span class="line">        <span class="hljs-keyword">int</span> n = arr.length;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 注意，此时我们的堆是从0开始索引的</span></span><br><span class="line">        <span class="hljs-comment">// 从(最后一个元素的索引-1)/2开始</span></span><br><span class="line">        <span class="hljs-comment">// 最后一个元素的索引 = n-1</span></span><br><span class="line">        <span class="hljs-keyword">for</span>( <span class="hljs-keyword">int</span> i = (n-<span class="hljs-number">1</span>-<span class="hljs-number">1</span>)/<span class="hljs-number">2</span> ; i &gt;= <span class="hljs-number">0</span> ; i -- )</span><br><span class="line">            shiftDown2(arr, n, i);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">for</span>( <span class="hljs-keyword">int</span> i = n-<span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span> ; i-- )&#123; <span class="hljs-comment">// 这个的目的是让序列从小到大排序</span></span><br><span class="line">            swap( arr, <span class="hljs-number">0</span>, i);</span><br><span class="line">            shiftDown2(arr, i, <span class="hljs-number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 交换堆中索引为i和j的两个元素</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(Object[] arr, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        Object t = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = t;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 原始的shiftDown过程</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shiftDown</span><span class="hljs-params">(Comparable[] arr, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> k)</span></span>&#123;</span><br><span class="line">        <span class="hljs-keyword">while</span>( <span class="hljs-number">2</span>*k+<span class="hljs-number">1</span> &lt; n )&#123;</span><br><span class="line">            <span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>*k+<span class="hljs-number">1</span>;</span><br><span class="line">            <span class="hljs-keyword">if</span>( j+<span class="hljs-number">1</span> &lt; n &amp;&amp; arr[j+<span class="hljs-number">1</span>].compareTo(arr[j]) &gt; <span class="hljs-number">0</span> )</span><br><span class="line">                j += <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">if</span>( arr[k].compareTo(arr[j]) &gt;= <span class="hljs-number">0</span> )<span class="hljs-keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            swap( arr, k, j);</span><br><span class="line">            k = j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 优化的shiftDown过程, 使用赋值的方式取代不断的swap,</span></span><br><span class="line">    <span class="hljs-comment">// 该优化思想和我们之前对插入排序进行优化的思路是一致的</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shiftDown2</span><span class="hljs-params">(Comparable[] arr, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> k)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        Comparable e = arr[k];</span><br><span class="line">        <span class="hljs-keyword">while</span>( <span class="hljs-number">2</span>*k+<span class="hljs-number">1</span> &lt; n )&#123;</span><br><span class="line">            <span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>*k+<span class="hljs-number">1</span>;</span><br><span class="line">            <span class="hljs-keyword">if</span>( j+<span class="hljs-number">1</span> &lt; n &amp;&amp; arr[j+<span class="hljs-number">1</span>].compareTo(arr[j]) &gt; <span class="hljs-number">0</span> )</span><br><span class="line">                j += <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">if</span>( e.compareTo(arr[j]) &gt;= <span class="hljs-number">0</span> )</span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            arr[k] = arr[j];</span><br><span class="line">            k = j;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        arr[k] = e;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 测试 HeapSort</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Integer[] arr = &#123;<span class="hljs-number">10</span>, <span class="hljs-number">91</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>&#125;;</span><br><span class="line">        HeapSort.sort2(arr);</span><br><span class="line">        PrintHelper.printArray(arr);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不使用一个额外的最大堆, 直接在原数组上进行原地的堆排序</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对整个arr数组使用HeapSort1排序</span></span><br><span class="line">    <span class="comment">// HeapSort1, 将所有的元素依次添加到堆中, 在将所有元素从堆中依次取出来, 即完成了排序</span></span><br><span class="line">    <span class="comment">// 无论是创建堆的过程, 还是从堆中依次取出元素的过程, 时间复杂度均为O(nlogn)</span></span><br><span class="line">    <span class="comment">// 整个堆排序的整体时间复杂度为O(nlogn)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort1</span><span class="params">(Comparable[] arr)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> n = arr.length;</span><br><span class="line">        MaxHeap&lt;Comparable&gt; maxHeap = <span class="keyword">new</span> MaxHeap&lt;Comparable&gt;(n);</span><br><span class="line">        <span class="keyword">for</span>( <span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++ )</span><br><span class="line">            maxHeap.insert(arr[i]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>( <span class="keyword">int</span> i = n-<span class="number">1</span> ; i &gt;= <span class="number">0</span> ; i -- )</span><br><span class="line">            arr[i] = maxHeap.extractMax();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 只通过shiftDown操作进行排序</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort2</span><span class="params">(Comparable[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = arr.length;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注意，此时我们的堆是从0开始索引的</span></span><br><span class="line">        <span class="comment">// 从(最后一个元素的索引-1)/2开始</span></span><br><span class="line">        <span class="comment">// 最后一个元素的索引 = n-1</span></span><br><span class="line">        <span class="keyword">for</span>( <span class="keyword">int</span> i = (n-<span class="number">1</span>-<span class="number">1</span>)/<span class="number">2</span> ; i &gt;= <span class="number">0</span> ; i -- )</span><br><span class="line">            shiftDown2(arr, n, i);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>( <span class="keyword">int</span> i = n-<span class="number">1</span>; i &gt; <span class="number">0</span> ; i-- )&#123; <span class="comment">// 这个的目的是让序列从小到大排序</span></span><br><span class="line">            swap( arr, <span class="number">0</span>, i);</span><br><span class="line">            shiftDown2(arr, i, <span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 交换堆中索引为i和j的两个元素</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(Object[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        Object t = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = t;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 原始的shiftDown过程</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shiftDown</span><span class="params">(Comparable[] arr, <span class="keyword">int</span> n, <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>( <span class="number">2</span>*k+<span class="number">1</span> &lt; n )&#123;</span><br><span class="line">            <span class="keyword">int</span> j = <span class="number">2</span>*k+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>( j+<span class="number">1</span> &lt; n &amp;&amp; arr[j+<span class="number">1</span>].compareTo(arr[j]) &gt; <span class="number">0</span> )</span><br><span class="line">                j += <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>( arr[k].compareTo(arr[j]) &gt;= <span class="number">0</span> )<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            swap( arr, k, j);</span><br><span class="line">            k = j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 优化的shiftDown过程, 使用赋值的方式取代不断的swap,</span></span><br><span class="line">    <span class="comment">// 该优化思想和我们之前对插入排序进行优化的思路是一致的</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shiftDown2</span><span class="params">(Comparable[] arr, <span class="keyword">int</span> n, <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        Comparable e = arr[k];</span><br><span class="line">        <span class="keyword">while</span>( <span class="number">2</span>*k+<span class="number">1</span> &lt; n )&#123;</span><br><span class="line">            <span class="keyword">int</span> j = <span class="number">2</span>*k+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>( j+<span class="number">1</span> &lt; n &amp;&amp; arr[j+<span class="number">1</span>].compareTo(arr[j]) &gt; <span class="number">0</span> )</span><br><span class="line">                j += <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>( e.compareTo(arr[j]) &gt;= <span class="number">0</span> )</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            arr[k] = arr[j];</span><br><span class="line">            k = j;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        arr[k] = e;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 测试 HeapSort</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Integer[] arr = &#123;<span class="number">10</span>, <span class="number">91</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        HeapSort.sort2(arr);</span><br><span class="line">        PrintHelper.printArray(arr);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="6-堆排序的应用——Top-K问题"><a href="#6-堆排序的应用——Top-K问题" class="headerlink" title="6. 堆排序的应用——Top K问题"></a>6. 堆排序的应用——Top K问题</h4><p>例如，有1亿个浮点数，如何找出其中最大的10000个？</p>
 <h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><p><strong>算法描述</strong><br>1.计数排序是一种非常快捷的稳定性强的排序方法，时间复杂度O(n+k),其中n为要排序的数的个数，k为要排序的数的组大值。计数排序对一定量的整数排序时候的速度非常快，一般快于其他排序算法。但计数排序局限性比较大，只限于对整数进行排序。计数排序是消耗空间发杂度来获取快捷的排序方法，其空间发展度为O（K）同理K为要排序的最大值。</p>
 <p>2.计数排序的基本思想为一组数在排序之前先统计这组数中其他数小于这个数的个数，则可以确定这个数的位置。例如要排序的数为 7 4 2 1 5 3 1 5；则比7小的有7个数，所有7应该在排序好的数列的第八位，同理3在第四位，对于重复的数字，1在1位和2位（暂且认为第一个1比第二个1小），5和1一样位于6位和7位。</p>
@@ -425,7 +493,7 @@
 <p>　　接着需要确定数组最大值并确定B数组的大小。并对每个数由小到大的记录数列中每个数的出现次数。因为是有小到大通过出现次数可以通过前面的所有数的出现次数来确定比这个数小的数的个数，从而确定其位置。</p>
 <p>　　对于重复的数，每排好一个数则对其位置数进行减减操作，以此对完成其余相同的数字进行排位。</p>
 <p><strong>代码实现</strong></p>
-<figure class="highlight c hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> n;</span><br><span class="line">    <span class="hljs-built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="hljs-keyword">int</span> *a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];</span><br><span class="line">    <span class="hljs-keyword">int</span> *c = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];</span><br><span class="line">    <span class="hljs-built_in">memset</span>(a, <span class="hljs-number">0</span>, n*<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>));</span><br><span class="line">    <span class="hljs-built_in">memset</span>(c, <span class="hljs-number">0</span>, n*<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>));</span><br><span class="line">    <span class="hljs-keyword">int</span> max = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="hljs-built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">        max = a[i]&gt;max ? a[i] : max;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">int</span> *b = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[max+<span class="hljs-number">1</span>];</span><br><span class="line">    <span class="hljs-built_in">memset</span>(b, <span class="hljs-number">0</span>, (max+<span class="hljs-number">1</span>)*<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>));</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        b[a[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; max + <span class="hljs-number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        b[i] = b[i] + b[i - <span class="hljs-number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        b[a[i]]--;</span><br><span class="line">        c[b[a[i]]] = a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="hljs-built_in">cout</span> &lt;&lt; c[i] &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">    <span class="hljs-keyword">delete</span>[]a;</span><br><span class="line">    <span class="hljs-keyword">delete</span>[]b;</span><br><span class="line">    <span class="hljs-keyword">delete</span>[]c;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> *a = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="keyword">int</span> *c = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="built_in">memset</span>(a, <span class="number">0</span>, n*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="built_in">memset</span>(c, <span class="number">0</span>, n*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">        max = a[i]&gt;max ? a[i] : max;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> *b = <span class="keyword">new</span> <span class="keyword">int</span>[max+<span class="number">1</span>];</span><br><span class="line">    <span class="built_in">memset</span>(b, <span class="number">0</span>, (max+<span class="number">1</span>)*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        b[a[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; max + <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        b[i] = b[i] + b[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        b[a[i]]--;</span><br><span class="line">        c[b[a[i]]] = a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; c[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">delete</span>[]a;</span><br><span class="line">    <span class="keyword">delete</span>[]b;</span><br><span class="line">    <span class="keyword">delete</span>[]c;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行结果:</p>
 <p>10<br>2 1 3 4 2 5 6 1 8 11<br>1<br>1<br>2<br>2<br>3<br>4<br>5<br>6<br>8<br>11<br>请按任意键继续. . .</p>
 <p>这就是传说中的时间复杂度只有O（n）的排序算法；</p>
@@ -471,7 +539,7 @@
 </tbody>
 </table>
 <p>稳定排序：对于相等的元素，在排序后，原来靠前的元素依然靠前。相等元素的相对位置没有发生变化。</p>
-<figure class="highlight java hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-comment">// 可以通过⾃自定义⽐比较函数，让排序算法不不存在稳定性的问题。</span></span><br><span class="line">bool operator&lt;(<span class="hljs-keyword">const</span> Student&amp; otherStudent)&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> score != otherStudent.score ?</span><br><span class="line">    score &gt; otherStudent.score :</span><br><span class="line">    name &lt; otherStudent.name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以通过⾃自定义⽐比较函数，让排序算法不不存在稳定性的问题。</span></span><br><span class="line">bool operator&lt;(<span class="keyword">const</span> Student&amp; otherStudent)&#123;</span><br><span class="line">    <span class="keyword">return</span> score != otherStudent.score ?</span><br><span class="line">    score &gt; otherStudent.score :</span><br><span class="line">    name &lt; otherStudent.name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="https://www.cnblogs.com/onepixel/articles/7674659.html" target="_blank" rel="noopener">十大经典排序算法（动图演示）</a></p>
 
       
@@ -567,10 +635,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -578,6 +646,10 @@
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="lsb" />
             
               <p class="site-author-name" itemprop="name">lsb</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -591,7 +663,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -600,10 +672,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
-                
+                  <span class="site-state-item-name">分类</span>
+                </a>
               </div>
             
 
@@ -611,10 +683,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">tags</span>
-                
+                  <span class="site-state-item-name">标签</span>
+                </a>
               </div>
             
 
@@ -622,13 +694,35 @@
 
           
             <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
+              <a href="https://github.com/" rel="alternate">
                 <i class="fa fa-rss"></i>
                 RSS
               </a>
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imnice" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:imdangerous@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -672,7 +766,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -682,15 +776,9 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
@@ -737,6 +825,8 @@
   
 
 
+  
+
 
 
 
@@ -777,6 +867,11 @@
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
 
   
 
@@ -789,6 +884,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
@@ -838,6 +940,323 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -852,6 +1271,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
